@@ -17,11 +17,11 @@
 	<div class="menu">
 			
 			<ul id="menu">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Catalogo</a></li>
-				<li><a href="#">Profilo</a></li>
-				<li><a href="#">Chi siamo?</a></li>
-				<li><a href="#">Contatti</a></li>
+				<li><a href="http://localhost:8080/Zacinto/home">Home</a></li>
+				<li><a href="http://localhost:8080/Zacinto/catalogo">Catalogo</a></li>
+				<li><a href="http://localhost:8080/Zacinto/profilo">Profilo</a></li>
+				<li><a href="http://localhost:8080/Zacinto/chi-siamo">Chi siamo?</a></li>
+				<li><a href="http://localhost:8080/Zacinto/contatti">Contatti</a></li>
 			</ul>
 	</div>
 	
