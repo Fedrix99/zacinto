@@ -1,0 +1,30 @@
+body{
+
+	background-color: #FFC281;
+	font-family: Verdana, sans-serif;
+}
+
+
+.box-errore {
+	
+	margin-top: 15%;
+	border: 1px solid #200000;
+	text-align: center;
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background: #FF8141;
+	
+}
+
+footer{
+	
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	
+	width: 100%;
+	background-color: #FF8141;
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	
+	text-align:center;
+	font-family: Verdana, sans-serif;
+}

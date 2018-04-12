@@ -1,0 +1,110 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+
+	<servlet>
+
+		<servlet-name>Login</servlet-name>
+		<servlet-class>zacintoView.Login</servlet-class>
+
+	</servlet>
+
+	<servlet>
+
+		<servlet-name>Register</servlet-name>
+		<servlet-class>zacintoView.Register</servlet-class>
+
+	</servlet>
+
+	<servlet>
+
+		<servlet-name>Home</servlet-name>
+		<servlet-class>zacintoView.Home</servlet-class>
+
+	</servlet>
+
+	<servlet>
+
+		<servlet-name>Catalogo</servlet-name>
+		<servlet-class>zacintoView.Catalogo</servlet-class>
+
+	</servlet>
+
+	<servlet>
+
+		<servlet-name>Profilo</servlet-name>
+		<servlet-class>zacintoView.Profilo</servlet-class>
+
+	</servlet>
+
+	<servlet>
+
+		<servlet-name>Prodotto</servlet-name>
+		<servlet-class>zacintoView.Prodotto</servlet-class>
+
+	</servlet>
+
+	<servlet>
+
+		<servlet-name>Errore</servlet-name>
+		<servlet-class>zacintoView.PaginaErrore</servlet-class>
+
+	</servlet>
+
+
+	<!-- Servlet Mapping -->
+	
+
+	<servlet-mapping>
+
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/login</url-pattern>
+
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>Register</servlet-name>
+		<url-pattern>/register</url-pattern>
+
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>Home</servlet-name>
+		<url-pattern>/home</url-pattern>
+
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>Catalogo</servlet-name>
+		<url-pattern>/catalogo</url-pattern>
+
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>Profilo</servlet-name>
+		<url-pattern>/profilo</url-pattern>
+
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>Prodotto</servlet-name>
+		<url-pattern>/prodotto</url-pattern>
+
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>Errore</servlet-name>
+		<url-pattern>/errore</url-pattern>
+
+	</servlet-mapping>
+
+</web-app>

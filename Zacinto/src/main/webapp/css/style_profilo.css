@@ -1,0 +1,143 @@
+body{
+
+	background-color: #FFC281;
+	font-family: Verdana, sans-serif;
+}
+
+.menu{
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 1%;
+		max-width:770px;
+		height:40px;
+
+}
+
+.conteiner-profilo{
+	
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1%;
+	max-width: 100%;
+	height:77%;
+	background-color: #FF8141;
+	
+}
+
+.welcome{
+	margin-left:auto;
+	margin-right:auto;
+	
+	background-color: #FFE1B0;
+	border: 1px solid #A11F12;
+    display: inline-block;
+    width: 75%;
+    height: 97%;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+	/*
+	margin-right: auto;
+	margin-top: 1%;
+	width: 30px;
+	height:30px;
+	border: 1px solid rgba(0,0,0,1);
+	background-color: #FF831C;
+	*/
+}
+
+.modifica{
+	margin-left:auto;
+	margin-right:auto;
+	
+	background-color: #FFE1B0;
+	border: 1px solid #A11F12;
+    display: inline-block;
+    width:22%;
+    height: 97%;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.modifica-dati{
+	
+	margin-left: 5px;
+	
+}
+
+
+h1{
+	
+	text-align:center;
+	background-color:#FF8141;
+	border: 1px solid #A11F12;
+	
+}
+
+/*Tabella dati*/
+
+table  { 
+	margin-right: auto;
+	margin-left: auto;
+    border-collapse:collapse;
+	background-color:#FF8141;
+}
+td, th { 
+   
+	border: 1px solid #A11F12;
+    padding:8px;
+}
+
+
+footer{
+	
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	
+	width: 100%;
+	background-color: #FF8141;
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	
+	text-align:center;
+	font-family: Verdana, sans-serif;
+}
+
+
+/* Bottoni barra menù*/
+
+ul#menu {
+    font-family: Verdana, sans-serif;
+    font-size: 11px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+  
+ul#menu li {
+    background-color: #FF831C;
+    border-bottom: 5px solid #A11F12;
+    display: block;
+    width: 150px;
+    height: 30px;
+    margin: 2px;
+    float: left; /* elementi su singola riga */
+}
+  
+ul#menu li a {
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    line-height: 30px;
+    text-decoration: none;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+}
+  
+ul#menu li.active, ul#menu li:hover {
+    background-color: #A11F12;
+    border-bottom: 5px solid #FF831C;
+}
