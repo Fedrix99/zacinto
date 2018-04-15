@@ -31,11 +31,11 @@
 					
 					<p> Sesso <INPUT type=text name="sesso"> </p>
 					
-					<p> Età: <INPUT type=text name="età"> </p>
+					<p> Et&agrave;: <INPUT type=text name="età"> </p>
 					
-					<p> Password: <INPUT type=text name="password"> </p>
+					<p> Password: <INPUT type=password name="password"> </p>
 					
-					<p> Ripeti Password: <INPUT type=text name="repeatPassword"> </p>	
+					<p> Ripeti Password: <INPUT type=password name="repeatPassword"> </p>	
 					
 					<button type=SUBMIT > Sing up </button>
 				

@@ -54,9 +54,16 @@
 
 	</servlet>
 
+	<servlet>
+
+		<servlet-name>Logout</servlet-name>
+		<servlet-class>zacintoView.Logout</servlet-class>
+
+	</servlet>
+
 
 	<!-- Servlet Mapping -->
-	
+
 
 	<servlet-mapping>
 
@@ -104,6 +111,13 @@
 
 		<servlet-name>Errore</servlet-name>
 		<url-pattern>/errore</url-pattern>
+
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/logout</url-pattern>
 
 	</servlet-mapping>
 

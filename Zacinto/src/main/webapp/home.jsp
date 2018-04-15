@@ -88,11 +88,21 @@
 
 		<div class="link">
 
-			<h1>LINK</h1>
+			<h2>LINK</h2>
 			<div class="link_attivi">
 				<li><a href="#">Dove siamo?</a></li>
 				<li><a href="#"></a></li>
 				<li><a href="#"></a></li>
+			</div>
+			
+			<div>
+				
+				<h2> Arrivederci...</h2>
+				
+				<form name="login" method="get" action="logout">
+				<button type=SUBMIT  style="display: block; margin: 0 auto; width: 100px;"> Logout </button>
+				</form>
+				
 			</div>
 		</div>
 

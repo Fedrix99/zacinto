@@ -34,7 +34,7 @@
 			<div class="dati">
 			
 				<table>
-					<tr><td>Nome: Mario</td><td>Telefono: 3342939456</td><td>Età: 29</td></tr>
+					<tr><td>Nome: Mario</td><td>Telefono: 3342939456</td><td>Et&agrave;: 29</td></tr>
 					<tr><td>Cognome: Rossi</td><td>Sesso: Uomo</td><td>Email: marietto@gmail.com</td></tr>
 				</table>
 			
@@ -58,7 +58,13 @@
 			<h1> Penali </h1>
 			
 			<table>
-				<tr><td>Penale in data 10/02/2018</td><td>Problema: Consegna in ritardo</td><td>Tot da pagare: 50€</td></tr>
+				<tr><td>Consegna in ritardo</td><td>Ritardo di 10 giorni</td><td>Tot da pagare: 10&euro;</td></tr>
+				<tr><td>Consegna in ritardo</td><td>Ritardo di 20 giorni</td><td>Tot da pagare: 15&euro;</td></tr>
+				<tr><td>Consegna in ritardo</td><td>Ritardo di 30 giorni</td><td>Tot da pagare: 25&euro;</td></tr>
+				<tr><td>Consegna in ritardo</td><td>Ritardo pi&ugrave; di 30 giorni</td><td>Tot da pagare: 25&euro;</td></tr>
+				<tr><td>Materiale danneggiato</td><td>Danno basso</td><td>Tot da pagare: 15&euro;</td></tr>
+				<tr><td>Materiale danneggiato</td><td>Danno medio</td><td>Tot da pagare: 25&euro;</td></tr>
+				<tr><td>Materiale danneggiato</td><td>Danno alto</td><td>Tot da pagare: 35&euro;</td></tr>
 			</table>
 				
 		
