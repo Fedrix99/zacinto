@@ -55,35 +55,38 @@
 			
 			<div class="prodotto_uno">
 			
-				libro 1
+				<h2> Libri </h2>
 				
 			</div>
 			
-			<div class="prodotto_uno">
+			<div class="prodotto_due">
 			
-				libro 2
+				<h2> Libri </h2>
 				
 			</div>
 			
-			<div class="prodotto_uno">
+			<div class="prodotto_tre">
 			
-				libro 3
+				<h2> Libri </h2>
 				
 			</div>
 			
-			<div class="prodotto_uno">
+			<div class="prodotto_quattro">
 			
-				libro 4
+				<h2> Libri </h2>
+				
 			</div>
 			
-			<div class="prodotto_uno">
+			<div class="prodotto_cinque">
 			
-				libro 5
+				<h2> Libri </h2>
+				
 			</div>
 			
-			<div class="prodotto_uno">
+			<div class="prodotto_sei">
 			
-				libro 6
+				<h2> Libri </h2>
+				
 			</div>
 			
 		
