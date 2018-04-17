@@ -97,6 +97,21 @@
 			
 			<div>
 				
+				<h2> Benvenuto </h2>
+				
+				<form name="login" method="get" action="login">
+				<button type=SUBMIT  style="display: block; margin-left: auto; margin-right: auto; width: 100px;"> Login </button>
+				</form>
+				
+				<form name="register" method="get" action="register">
+				<button type=SUBMIT  style="display: block; margin-left: auto; margin-right: auto; margin-top: 5px;width: 100px;"> Register </button>
+				</form>
+				
+			</div>
+			
+			
+			<div>
+				
 				<h2> Arrivederci...</h2>
 				
 				<form name="login" method="get" action="logout">
