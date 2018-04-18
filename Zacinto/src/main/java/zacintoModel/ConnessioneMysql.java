@@ -18,7 +18,7 @@ public class ConnessioneMysql {
 
 		// Creo la connessione al database
 		cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/zacinto?user=root&password=");
-		// peer è il nome del database
+		// zacinto è il nome del database
 
 		sql = "SELECT * FROM corso;";
 		// ________________________________query
