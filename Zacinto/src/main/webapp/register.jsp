@@ -18,26 +18,26 @@
 		</a>	
 			<div class="box-register">
 			
-				<form name="register" method="get" action="home" >
+				<form name="register" method="get" action="profilo" >
 
 
 					<p> Nome: <INPUT type=text name="nome" > </p>
 					
-					<p> Cognome: <INPUT type=text name="Cognome"> </p>
+					<p> Cognome: <INPUT type=text name="cognome"> </p>
 
 					<p> Email: <INPUT type=text name="email"> </p>
 					
-					<p> Telefono <INPUT type=text name="phone"> </p>
+					<p> Telefono <INPUT type=text name="telefono"> </p>
 					
 					<p> Sesso <INPUT type=text name="sesso"> </p>
 					
-					<p> Et&agrave;: <INPUT type=text name="età"> </p>
+					<p> Et&agrave;: <INPUT type=text name="eta"> </p>
 					
 					<p> Password: <INPUT type=password name="password"> </p>
 					
 					<p> Ripeti Password: <INPUT type=password name="repeatPassword"> </p>	
 					
-					<button type=SUBMIT > Sing up </button>
+					<button type=SUBMIT > Sign up </button>
 				
 				</form>	
 		

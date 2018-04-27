@@ -3,35 +3,61 @@ package zacintoModel;
 import java.sql.*;
 
 public class ConnessioneMysql {
-	public static void main(String[] args) throws SQLException {
-		Connection cn;
-		Statement st;
-		ResultSet rs;
+	public static Connection dbconnect() throws SQLException {
+		
+		Connection cn = null;
+		
+		String connessione;
+		
 		String sql;
-		// ________________________________connessione
-		try {
-			Class.forName("com.mysql.jdbc.Driver");
-		} catch (ClassNotFoundException e) {
-			System.out.println("ClassNotFoundException: ");
-			System.err.println(e.getMessage());
-		} // fine try-catch
+		
+		connessione="jdbc:mysql://localhost:3306/zacinto?user=root&password=";
+		
+		//Connection
 
-		// Creo la connessione al database
-		cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/zacinto?user=root&password=");
-		// zacinto è il nome del database
+				try {//Start try n catch
 
-		sql = "SELECT * FROM corso;";
-		// ________________________________query
-		try {
-			st = cn.createStatement(); // creo sempre uno statement sulla
-										// connessione
-			rs = st.executeQuery(sql); // faccio la query su uno statement
-			while (rs.next() == true) {
-				System.out.println(rs.getString("id") + "\t" + rs.getString("idTutor"));
-			}
-		} catch (SQLException e) {
-			System.out.println("errore:" + e.getMessage());
-		} // fine try-catch
-		cn.close(); // chiusura connessione
-	}// fine main
-}// fine classe
+					Class.forName("com.mysql.jdbc.Driver");
+
+				} catch (ClassNotFoundException e) {
+
+					System.out.println("ClassNotFoundException: ");
+					System.out.println(e.getMessage());
+
+				}//End try n catch
+						
+				
+				try {
+					cn = DriverManager.getConnection(connessione);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}//applicationdb is the name of DB
+				return cn;
+
+	}
+	
+	public static ResultSet query(Connection cn,String sql) throws SQLException {
+		
+		ResultSet rs;
+		
+		Statement st;
+		
+		st=cn.createStatement();
+		
+		rs=st.executeQuery(sql);
+		
+		return rs;
+		
+	}
+	
+	public static void queryUpdate(Connection cn, String sql) throws SQLException {
+		Statement st;
+		
+		st = cn.createStatement();
+		
+		st.executeUpdate(sql);//Query to statement
+		 
+	}
+	
+}
