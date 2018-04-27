@@ -2,18 +2,19 @@ package zacintoController;
 
 public class Register {
 	
+	private int id;
 	private String nome;
 	private String cognome;
 	private String email;
 	private String telefono;
 	private String sesso;
 	private String password;
-	
-	private int eta;
+	private String eta;
 
-	public Register(String nome, String cognome, String email, String telefono, String sesso, String password,
-			int eta) {
+	public Register(int id, String nome, String cognome, String email, String telefono, String sesso, String password,
+			String eta) {
 		super();
+		this.id = id;
 		this.nome = nome;
 		this.cognome = cognome;
 		this.email = email;
@@ -21,6 +22,14 @@ public class Register {
 		this.sesso = sesso;
 		this.password = password;
 		this.eta = eta;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getNome() {

@@ -44,9 +44,9 @@ public class RegisterMsql {
 				while (rs.next() == true) {
 					
 					//nome classe con le variabili
-					Register a = new Register(rs.getString("nome"),rs.getString("cognome"),
+					Register a = new Register(rs.getInt("id"),rs.getString("nome"),rs.getString("cognome"),
 							rs.getString("email"),rs.getString("telefono"),rs.getString("sesso"),
-							rs.getString("password"),rs.getInt("eta"));
+							rs.getString("password"),rs.getString("eta"));
 					
 				}
 			} catch (SQLException e) {
