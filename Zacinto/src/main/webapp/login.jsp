@@ -23,10 +23,10 @@
 				<form name="login" method="get" action="home" >
 
 
-					<p> User: <INPUT type=text name="user" > </p>
+					<p> Email: <INPUT type=email name="email" class="form-control" placeholder="Email" required > </p>
 
 
-					<p> Password: <INPUT type=text name="password"> </p>
+					<p> Password: <INPUT type=password name="password" class="form-control" placeholder="Password" required> </p>
 				
 					<button type=SUBMIT > Login </button>
 				

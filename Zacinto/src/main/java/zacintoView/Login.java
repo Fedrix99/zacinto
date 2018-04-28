@@ -1,6 +1,9 @@
 package zacintoView;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,19 +11,27 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+
+import zacintoModel.*;
+import zacintoController.*;
+
+
 @SuppressWarnings("serial")
 public class Login extends HttpServlet {
 
+	@SuppressWarnings("null")
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
+
 		resp.setContentType("text/html"); 
+		String nextJSP;
 		
-		String nextJSP = "/login.jsp";
+		nextJSP = "/login.jsp";
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
-		dispatcher.forward(req,resp);
-		
+		dispatcher.forward(req,resp);		
+
 	}
 
 	@Override
@@ -29,9 +40,9 @@ public class Login extends HttpServlet {
 		super.doPost(req, resp);
 	}
 
-	
-	
-	
-	
-	
+
+
+
+
+
 }
