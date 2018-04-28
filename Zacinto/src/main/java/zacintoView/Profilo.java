@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import zacintoController.Register; // Classe dell'altro pacchetto
 import zacintoModel.ConnessioneMysql;
+import zacintoModel.RegisterMsql;
 
 @SuppressWarnings("serial")
 public class Profilo extends HttpServlet {
@@ -21,10 +22,16 @@ public class Profilo extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		resp.setContentType("text/html"); 
-
+	
+		String nextJSP = "/profilo.jsp";
+		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
+		dispatcher.forward(req,resp);
+		
+		
 		//Settati i paramentri
+		
 		Register utente = new Register();
-
+		
 		utente.setNome(req.getParameter("nome"));
 
 		utente.setCognome(req.getParameter("cognome"));
@@ -38,23 +45,21 @@ public class Profilo extends HttpServlet {
 		utente.setPassword(req.getParameter("password"));
 
 		utente.setEta(req.getParameter("eta"));
+	
 
-		System.out.println(utente.getNome() + utente.getCognome() +utente.getEmail()+ utente.getTelefono()+ utente.getSesso()+utente.getPassword()+utente.getEta());
-		// Connessione al DB 
+
+
+		// Richiama elecoutenti in cui ce il while
+		RegisterMsql stampaUtenti = new RegisterMsql();
+		
 		try {
-			cn = ConnessioneMysql.dbconnect();
-
-			ConnessioneMysql.queryUpdate(cn, "INSERT INTO `Utenti` (`id`, `nome`, `cognome`, `email`, `telefono`, `sesso`, `password`, `eta`) VALUES (NULL, '"+ utente.getNome() +"', '"+ utente.getCognome() +"', '"+utente.getEmail()+"', '"+utente.getTelefono()+"', '"+utente.getSesso()+"', '"+utente.getPassword()+"', '"+utente.getEta()+"')");
-			
-		} catch (SQLException e) {
+			req.setAttribute("prova", stampaUtenti.elencoUtenti());
+		} catch (SQLException e1) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e1.printStackTrace();
 		}
+		
 
-
-		String nextJSP = "/profilo.jsp";
-		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
-		dispatcher.forward(req,resp);
 
 	}
 

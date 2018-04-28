@@ -11,6 +11,21 @@ public class Register {
 	private String password;
 	private String eta;
 	
+	
+	
+	public Register(int id, String nome, String cognome, String email, String telefono, String sesso, String password,
+			String eta) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.cognome = cognome;
+		this.email = email;
+		this.telefono = telefono;
+		this.sesso = sesso;
+		this.password = password;
+		this.eta = eta;
+	}
+
 	public Register() {
 	 
 	}
@@ -109,12 +124,12 @@ public class Register {
 		this.eta = eta;
 	}
 
-
-
+	@Override
 	public String toString() {
-		return "Register [nome=" + nome + ", cognome=" + cognome + ", email=" + email + ", telefono=" + telefono
-				+ ", sesso=" + sesso + ", password=" + password + ", eta=" + eta + "]";
-	}	
+		return "Register [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", email=" + email + ", telefono="
+				+ telefono + ", sesso=" + sesso + ", password=" + password + ", eta=" + eta + "]";
+	}
+
 
 	
 

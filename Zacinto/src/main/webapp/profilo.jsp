@@ -29,7 +29,7 @@
 		
 		<div class="welcome">
 			
-			<h1> Ciao, <%=request.getAttribute("nome")%>! </h1>
+			<h1> Ciao, <%=request.getAttribute("prova")%>! </h1>
 			
 			<div class="dati">
 			

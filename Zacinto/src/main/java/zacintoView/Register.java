@@ -1,12 +1,15 @@
 package zacintoView;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import zacintoModel.*;
 
 @SuppressWarnings("serial")
 public class Register extends HttpServlet {
@@ -16,6 +19,7 @@ public class Register extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		resp.setContentType("text/html"); 
+		
 		
 		String nextJSP = "/register.jsp";
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);

@@ -16,39 +16,30 @@ public class RegisterMsql {
 		
 			ArrayList<Register> Utente = new ArrayList<Register>();
 		
-		
-			Connection cn;
-			Statement st;
+			java.sql.Connection cn = null;
 			ResultSet rs;
 			String sql;
-			
-			// ________________________________connessione
-			try {
-				Class.forName("com.mysql.jdbc.Driver");
-			} catch (ClassNotFoundException e) {
-				System.out.println("ClassNotFoundException: ");
-				System.err.println(e.getMessage());
-			} // fine try-catch
 
 			// Creo la connessione al database
-			cn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/zacinto?user=root&password=");
-			// zacinto è il nome del database
-
-			sql = "SELECT nome,cognome,email,telefono,sesso,password,eta;"; //prendo tabella
+			cn = ConnessioneMysql.dbconnect();
 			
+
+			sql = "SELECT * FROM utenti"; //prendo tabella
+			
+
 			// ________________________________query
 			try {
-				st = (Statement) cn.createStatement(); // creo sempre uno statement sulla
-											// connessione
-				rs = st.executeQuery(sql); // faccio la query su uno statement
+				
+				rs=ConnessioneMysql.query(cn, sql);
+			//Scorre le colonne del DB finche trova colonne e aggiunge all'arraylist
 				while (rs.next() == true) {
+						
+					Register UtenteOgg = new Register(rs.getInt("id"),rs.getString("nome"),rs.getString("cognome"),rs.getString("email"),rs.getString("telefono"),rs.getString("sesso"),rs.getString("password"),rs.getString("eta"));
+
+					Utente.add(UtenteOgg);
 					
-					//nome classe con le variabili
-//					Register a = new Register(rs.getInt("id"),rs.getString("nome"),rs.getString("cognome"),
-//							rs.getString("email"),rs.getString("telefono"),rs.getString("sesso"),
-//							rs.getString("password"),rs.getString("eta"));
-//					
 				}
+				
 			} catch (SQLException e) {
 				System.out.println("errore:" + e.getMessage());
 			} // fine try-catch

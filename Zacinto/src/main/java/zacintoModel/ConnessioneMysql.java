@@ -11,7 +11,7 @@ public class ConnessioneMysql {
 		
 		String sql;
 		
-		connessione="jdbc:mysql://localhost:3306/zacinto?user=root&password=";
+		connessione="jdbc:mysql://localhost:1234/zacinto?user=root&password=";
 		
 		//Connection
 
