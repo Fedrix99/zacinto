@@ -29,13 +29,13 @@
 		
 		<div class="welcome">
 			
-			<h1> Welcome, common name! </h1>
+			<h1> Ciao, <%=request.getAttribute("nome")%>! </h1>
 			
 			<div class="dati">
 			
 				<table>
-					<tr><td>Nome: Mario</td><td>Telefono: 3342939456</td><td>Et&agrave;: 29</td></tr>
-					<tr><td>Cognome: Rossi</td><td>Sesso: Uomo</td><td>Email: marietto@gmail.com</td></tr>
+					<tr><td>Nome: <%=request.getAttribute("nome")%></td><td>Telefono: <%=request.getAttribute("telefono")%></td><td>Et&agrave;: <%=request.getAttribute("eta")%></td></tr>
+					<tr><td>Cognome: <%=request.getAttribute("cognome")%></td><td>Sesso: <%=request.getAttribute("sesso")%></td><td>Email: <%=request.getAttribute("email")%></td></tr>
 				</table>
 			
 			</div>
@@ -80,7 +80,7 @@
 				<div class="modifica-dati">
 					<li><a href="#">Nome</a></li>
 					<li><a href="#">Cognome</a></li>
-					<li><a href="#">Età</a></li>
+					<li><a href="#">Et&agrave</a></li>
 					<li><a href="#">Telefono</a></li>
 					<li><a href="#">Email</a></li>
 					<li><a href="#">Sesso</a></li>
