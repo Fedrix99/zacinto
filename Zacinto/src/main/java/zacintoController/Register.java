@@ -1,7 +1,7 @@
 package zacintoController;
 
 public class Register {
-	
+
 	private int id;
 	private String nome;
 	private String cognome;
@@ -10,12 +10,12 @@ public class Register {
 	private String sesso;
 	private String password;
 	private String eta;
-	
-	
-	
+
+
+
 	public Register(int id, String nome, String cognome, String email, String telefono, String sesso, String password,
 			String eta) {
-		super();
+		
 		this.id = id;
 		this.nome = nome;
 		this.cognome = cognome;
@@ -27,7 +27,7 @@ public class Register {
 	}
 
 	public Register() {
-	 
+
 	}
 
 	public int getId() {
@@ -131,6 +131,6 @@ public class Register {
 	}
 
 
-	
+
 
 }
