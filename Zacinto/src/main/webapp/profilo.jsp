@@ -34,8 +34,8 @@
 		<div class="welcome">
 
 			<h1>
-				Ciao,
-				<%=request.getAttribute("prova")%>!
+				Ciao,<%=request.getAttribute("nome")%>!
+				
 			</h1>
 
 			<div class="dati">

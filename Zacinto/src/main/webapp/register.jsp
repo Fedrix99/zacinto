@@ -21,21 +21,21 @@
 				<form name="register" method="get" action="profilo" >
 
 
-					<p> Nome: <INPUT type=text name="nome" > </p>
+					<p> Nome: <input type=text name="nome" class="form-control" placeholder="Nome" required> </p>
 					
-					<p> Cognome: <INPUT type=text name="cognome"> </p>
+					<p> Cognome: <INPUT type=text name="cognome" class="form-control" placeholder="Cognome" required> </p>
 
-					<p> Email: <INPUT type=text name="email"> </p>
+					<p> Email: <INPUT type=email name="email" class="form-control" placeholder="Email" required> </p>
 					
-					<p> Telefono <INPUT type=text name="telefono"> </p>
+					<p> Telefono <INPUT type=text name="telefono" class="form-control" placeholder="Telefono" required> </p>
 					
-					<p> Sesso <INPUT type=text name="sesso"> </p>
+					<p> Sesso <INPUT type=text name="sesso" class="form-control" placeholder="Sesso" required> </p>
 					
-					<p> Et&agrave;: <INPUT type=text name="eta"> </p>
+					<p> Et&agrave;: <INPUT type=text name=eta class="form-control" placeholder="Età" required> </p>
 					
-					<p> Password: <INPUT type=password name="password"> </p>
+					<p> Password: <INPUT type=password name="password" class="form-control" placeholder="Password" required> </p>
 					
-					<p> Ripeti Password: <INPUT type=password name="repeatPassword"> </p>	
+					<p> Ripeti Password: <INPUT type=password name="repeatPassword" class="form-control" placeholder="Password" required> </p>	
 					
 					<button type=SUBMIT > Sign up </button>
 				

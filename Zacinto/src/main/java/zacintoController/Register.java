@@ -124,13 +124,4 @@ public class Register {
 		this.eta = eta;
 	}
 
-	@Override
-	public String toString() {
-		return "Register [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", email=" + email + ", telefono="
-				+ telefono + ", sesso=" + sesso + ", password=" + password + ", eta=" + eta + "]";
-	}
-
-
-
-
 }
