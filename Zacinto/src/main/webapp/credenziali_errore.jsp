@@ -29,11 +29,11 @@
 		</div>
 
 
-		<p>Clicca il pulsante per tornare alla Login</p>
+		<p><%=request.getAttribute("error")%></p>
 
 		<form action="login">
 
-			<button>Vai alla Login</button>
+			<button>Riprova</button>
 
 		</form>
 

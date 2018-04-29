@@ -72,7 +72,10 @@ public class Profilo extends HttpServlet {
 			
 
 		}else{
-
+			
+			String erroremsn; // messaggio di errore
+			erroremsn = "Le due password non corrispondono.";
+			req.setAttribute("error", erroremsn);
 			nextJSP = "/credenziali_errore.jsp";
 			
 		}

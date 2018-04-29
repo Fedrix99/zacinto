@@ -29,15 +29,20 @@ public class Home extends HttpServlet {
 		Connection cn = null;
 		ResultSet rsEmail;
 		ResultSet rsPassword;
-		
+
 		email = req.getParameter("email");
 		password = req.getParameter("password");
 
 		System.out.println("getParameter "+email+""+password);
 
 		if(email == null && password == null) {
+			
+			String erroremsn; // messaggio di errore
+			erroremsn = "Email e Password errati riprovare.";
+			req.setAttribute("error", erroremsn);
+			nextJSP = "/credenziali_errore.jsp";
+			
 
-				nextJSP = "/credenziali_errore.jsp";
 
 		}else {
 
@@ -47,16 +52,16 @@ public class Home extends HttpServlet {
 				rsEmail = ConnessioneMysql.queryRs(cn, "SELECT email FROM `utenti` WHERE email='"+ email +"'");
 				rsPassword = ConnessioneMysql.queryRs(cn, "SELECT password FROM `utenti` WHERE password='"+ password +"'");
 
-//				String emailX = rsEmail.getString(email);
-//				String passX = rsPassword.getString(password);
-				
-//				while (rsEmail.next() == true && rsPassword.next() == true) {
-//
-//					em= rsEmail.getString("email");
-//
-//					ps = rsPassword.getString("password");
-//
-//				}
+				//				String emailX = rsEmail.getString(email);
+				//				String passX = rsPassword.getString(password);
+
+				//				while (rsEmail.next() == true && rsPassword.next() == true) {
+				//
+				//					em= rsEmail.getString("email");
+				//
+				//					ps = rsPassword.getString("password");
+				//
+				//				}
 				System.out.println("Resultset"+rsEmail+""+rsPassword);
 
 			} catch (SQLException e) {
@@ -64,7 +69,7 @@ public class Home extends HttpServlet {
 				e.printStackTrace();
 			} // Connessione DB
 
-			
+
 		}
 
 		nextJSP = "/home.jsp";
