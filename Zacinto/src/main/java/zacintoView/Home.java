@@ -33,7 +33,7 @@ public class Home extends HttpServlet {
 		email = req.getParameter("email");
 		password = req.getParameter("password");
 
-		System.out.println("getParameter "+email+password);
+		System.out.println("getParameter "+email+""+password);
 
 		if(email == null && password == null) {
 
@@ -49,14 +49,15 @@ public class Home extends HttpServlet {
 
 //				String emailX = rsEmail.getString(email);
 //				String passX = rsPassword.getString(password);
-				while (rsEmail.next() == true && rsPassword.next() == true) {
-
-					em= rsEmail.getString("email");
-
-					ps = rsPassword.getString("password");
-
-				}
-				System.out.println("Resultset"+em+ps);
+				
+//				while (rsEmail.next() == true && rsPassword.next() == true) {
+//
+//					em= rsEmail.getString("email");
+//
+//					ps = rsPassword.getString("password");
+//
+//				}
+				System.out.println("Resultset"+rsEmail+""+rsPassword);
 
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
