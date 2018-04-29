@@ -15,6 +15,7 @@ public class RegisterMsql {
 		ResultSet rs;
 		String sql;
 
+		
 		// Creo la connessione al database
 		cn = ConnessioneMysql.dbconnect();
 
@@ -25,7 +26,7 @@ public class RegisterMsql {
 		// query
 		try {
 
-			rs=ConnessioneMysql.query(cn, sql);
+			rs=ConnessioneMysql.queryRs(cn, sql);
 			//Scorre le colonne del DB finche trova colonne e aggiunge all'arraylist
 			while (rs.next() == true) {
 

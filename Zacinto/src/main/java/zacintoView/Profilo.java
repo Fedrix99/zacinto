@@ -62,10 +62,7 @@ public class Profilo extends HttpServlet {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		
-		
-
-		
+			
 		String nextJSP = "/profilo.jsp";
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
 		dispatcher.forward(req,resp);

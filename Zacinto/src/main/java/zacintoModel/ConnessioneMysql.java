@@ -41,7 +41,7 @@ public class ConnessioneMysql {
 
 	}
 
-	public static ResultSet query(Connection cn,String sql) throws SQLException {
+	public static ResultSet queryRs(Connection cn,String sql) throws SQLException {
 
 		ResultSet rs;
 
