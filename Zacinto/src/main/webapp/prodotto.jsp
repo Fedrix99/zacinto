@@ -35,7 +35,7 @@
 
 		<div class="prodotto">
 
-			<h1>Nome prodotto</h1>
+			<h1><%=request.getAttribute("nomeProdotto")%></h1>
 
 			<div class="foto-prodotto">
 
@@ -52,11 +52,11 @@
 				<table>
 					<tr>
 						<td>Genere</td>
-						<td>common</td>
+						<td><%=request.getAttribute("romanzo")%></td>
 					</tr>
 					<tr>
 						<td>Autore</td>
-						<td>common</td>
+						<td><%=request.getAttribute("autore")%></td>
 					</tr>
 				</table>
 
@@ -72,7 +72,12 @@
 			<p>
 
 
-				<form name="prenota" action="riepilogo"><button type=SUBMIT>Prenota</button></form>
+				<form name="prenota" method="get" action="riepilogo">
+				<p> Inserisci il nome del prodotto: <p>
+				<INPUT type=text name="nomeprodotto" class="form-control" placeholder="Nome Prodotto" required > <button type=SUBMIT>Prenota</button>
+				
+				
+				</form>
 
 		</div>
 

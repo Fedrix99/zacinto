@@ -60,6 +60,13 @@
 		<servlet-class>zacintoView.Logout</servlet-class>
 
 	</servlet>
+	
+	<servlet>
+	
+		<servlet-name>Riepilogo</servlet-name>
+		<servlet-class>zacintoView.Riepilogo</servlet-class>	
+		
+	</servlet>
 
 
 	<!-- Servlet Mapping -->
@@ -120,5 +127,13 @@
 		<url-pattern>/logout</url-pattern>
 
 	</servlet-mapping>
+
+	<servlet-mapping>
+	
+		<servlet-name>Riepilogo</servlet-name>
+		<url-pattern>/riepilogo</url-pattern>
+	
+	</servlet-mapping>
+	
 
 </web-app>
