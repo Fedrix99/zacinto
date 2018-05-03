@@ -11,6 +11,13 @@
 		<servlet-class>zacintoView.Login</servlet-class>
 
 	</servlet>
+	
+	<servlet>
+
+		<servlet-name>LoginAccess</servlet-name>
+		<servlet-class>zacintoView.LoginAccess</servlet-class>
+
+	</servlet>
 
 	<servlet>
 
@@ -76,6 +83,13 @@
 
 		<servlet-name>Login</servlet-name>
 		<url-pattern>/login</url-pattern>
+
+	</servlet-mapping>
+	
+	<servlet-mapping>
+
+		<servlet-name>LoginAccess</servlet-name>
+		<url-pattern>/loginAccess</url-pattern>
 
 	</servlet-mapping>
 

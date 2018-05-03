@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ page import="zacintoController.Utente" %> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,6 +9,13 @@
 <title>Zacinto Home</title>
 </head>
 <body>
+
+<%
+				
+							Utente u = (Utente) request.getAttribute("userLog");
+				
+				
+				%>
 
 	<div class="logo">
 
@@ -82,7 +90,7 @@
 					text...</marquee>
 
 			</div>
-	
+
 
 		</div>
 
@@ -94,30 +102,48 @@
 				<li><a href="#"></a></li>
 				<li><a href="#"></a></li>
 			</div>
-			
+
 			<div>
-				
-				<h2> Benvenuto </h2>
-				
+
+				<%
+					if (u != null) {
+				%>
+				<h1> Benvenuto, <%=u.getNome() %></h1>
+				<%
+					} else {
+				%>
+
+				<h1> Benvenuto </h1>
+				<%
+					}
+				%>
+
+
 				<form name="login" method="get" action="login">
-				<button type=SUBMIT  style="display: block; margin-left: auto; margin-right: auto; width: 100px;"> Login </button>
+					<button type=SUBMIT
+						style="display: block; margin-left: auto; margin-right: auto; width: 100px;">
+						Login</button>
 				</form>
-				
+
 				<form name="register" method="get" action="register">
-				<button type=SUBMIT  style="display: block; margin-left: auto; margin-right: auto; margin-top: 5px;width: 100px;"> Register </button>
+					<button type=SUBMIT
+						style="display: block; margin-left: auto; margin-right: auto; margin-top: 5px; width: 100px;">
+						Register</button>
 				</form>
-				
+
 			</div>
-			
-			
+
+
 			<div>
-				
-				<h2> Arrivederci...</h2>
-				
+
+				<h2>Arrivederci...</h2>
+
 				<form name="login" method="get" action="logout">
-				<button type=SUBMIT  style="display: block; margin: 0 auto; width: 100px;"> Logout </button>
+					<button type=SUBMIT
+						style="display: block; margin: 0 auto; width: 100px;">
+						Logout</button>
 				</form>
-				
+
 			</div>
 		</div>
 

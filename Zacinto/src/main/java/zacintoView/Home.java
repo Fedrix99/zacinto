@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import zacintoController.Utente;
 import zacintoModel.ConnessioneMysql;
 
 @SuppressWarnings("serial")
@@ -44,13 +45,22 @@ public class Home extends HttpServlet {
 			
 
 
-		}else {
+	//	}else {
 
 			try {
 				cn = ConnessioneMysql.dbconnect();
+email="a@a";
+password ="a";
 
-				rsEmail = ConnessioneMysql.queryRs(cn, "SELECT email FROM `utenti` WHERE email='"+ email +"'");
-				rsPassword = ConnessioneMysql.queryRs(cn, "SELECT password FROM `utenti` WHERE password='"+ password +"'");
+				
+				rsEmail = ConnessioneMysql.queryRs(cn, "SELECT * FROM `utenti` WHERE email='"+ email +"' and password ='"+ password+"'");
+				rsEmail.first();
+				
+				Utente user = new Utente();
+				
+				user.setEmail(rsEmail.getString("email"));
+				user.setNome(rsEmail.getString("nome"));
+				
 
 				//				String emailX = rsEmail.getString(email);
 				//				String passX = rsPassword.getString(password);
@@ -62,7 +72,9 @@ public class Home extends HttpServlet {
 				//					ps = rsPassword.getString("password");
 				//
 				//				}
-				System.out.println("Resultset"+rsEmail+""+rsPassword);
+				
+				req.setAttribute("userLog", user);
+				System.out.println("Resultset"+rsEmail+""+rsEmail);
 
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block

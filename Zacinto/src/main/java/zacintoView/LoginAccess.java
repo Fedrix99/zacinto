@@ -18,7 +18,7 @@ import zacintoController.*;
 import zacintoController.Register;
 
 @SuppressWarnings("serial")
-public class Login extends HttpServlet {
+public class LoginAccess extends HttpServlet {
 
 	@SuppressWarnings("null")
 	@Override
@@ -27,8 +27,15 @@ public class Login extends HttpServlet {
 
 		resp.setContentType("text/html"); 
 		String nextJSP;
-				
-		nextJSP = "/login.jsp";
+
+		
+
+		req.setAttribute("email", new Object());
+		
+		
+		
+
+		nextJSP = "/home.jsp";
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
 		dispatcher.forward(req,resp);
 	}
@@ -44,7 +51,7 @@ public class Login extends HttpServlet {
 		super.doPost(req, resp);
 	}
 
-	
+
 
 
 

@@ -20,7 +20,7 @@
 		</a>	
 			<div class="box-login">
 			
-				<form name="login" method="get" action="home" >
+				<form name="login" method="get" action="loginAccess" >
 
 
 					<p> Email: <INPUT type=email name="email" class="form-control" placeholder="Email" required > </p>
