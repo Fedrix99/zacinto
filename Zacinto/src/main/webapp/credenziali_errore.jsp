@@ -33,7 +33,7 @@
 
 		<form action="login">
 
-			<button>Riprova</button>
+			<button><%=request.getAttribute("textpulsante")%></button>
 
 		</form>
 

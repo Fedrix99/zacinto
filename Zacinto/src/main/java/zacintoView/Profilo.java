@@ -26,64 +26,85 @@ public class Profilo extends HttpServlet {
 		// TODO Auto-generated method stub
 		resp.setContentType("text/html"); 
 		String nextJSP;
-		Register utente = new Register();
-
-		utente.setNome(req.getParameter("nome"));
-
-		utente.setCognome(req.getParameter("cognome"));
-
-		utente.setEmail(req.getParameter("email"));  
-
-		utente.setTelefono(req.getParameter("telefono"));
-
-		utente.setSesso(req.getParameter("sesso"));
-
-		utente.setPassword(req.getParameter("password"));
-
-		utente.setEta(req.getParameter("eta"));
-		/*
-		Utente utente2 = (Utente) req.getAttribute("user");
-		if(utente2!= null ) {
-			utente2.get
-		}*/
-		String pss = req.getParameter("password");
-		String rps = req.getParameter("repeatPassword");
 		
-			if(pss.equals(rps)) {
+		Utente u = (Utente) req.getAttribute("userLog");
 
-				Connection cn = null;
-				// Connessione al DB INVIA I DATI PER REGISTRARE UN NUOVO UTENTE
-				try {
-					cn = ConnessioneMysql.dbconnect();
+		if(u != null) {
+			
+			nextJSP = "/profilo.jsp";
 
-					ConnessioneMysql.queryUpdate(cn, "INSERT INTO `Utenti` (`id`, `nome`, `cognome`, `email`, `telefono`, `sesso`, `password`, `eta`) VALUES (NULL, '"+ utente.getNome() +"', '"+ utente.getCognome() +"', '"+utente.getEmail()+"', '"+utente.getTelefono()+"', '"+utente.getSesso()+"', '"+utente.getPassword()+"', '"+utente.getEta()+"')");
-
-				} catch (SQLException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-
-				// Richiama elecoutenti in cui ce il while permette di STAMPARE
-				try {
-					RegisterMsql stampaUtenti = new RegisterMsql();
-					req.setAttribute("nome", stampaUtenti.elencoUtenti().get(0).getNome());
-				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-
-				nextJSP = "/profilo.jsp";
-				
-
-			}else{
-				
-				String erroremsn; // messaggio di errore
-				erroremsn = "Le due password non corrispondono.";
-				req.setAttribute("error", erroremsn);
-				nextJSP = "/credenziali_errore.jsp";
-				
-			}
-
+			
+		}else {
+			
+			String erroremsn; // messaggio di errore
+			erroremsn = "Per visualizzare la pagina profilo devi essere registrato.";
+			req.setAttribute("error", erroremsn);
+			String pulsanteLogin;
+			pulsanteLogin ="Login";
+			req.setAttribute("textpulsante", pulsanteLogin);
+			nextJSP = "/credenziali_errore.jsp";
+			
+			
+		}
+//		/*
+//		Register utente = new Register();
+//
+//		utente.setNome(req.getParameter("nome"));
+//
+//		utente.setCognome(req.getParameter("cognome"));
+//
+//		utente.setEmail(req.getParameter("email"));  
+//
+//		utente.setTelefono(req.getParameter("telefono"));
+//
+//		utente.setSesso(req.getParameter("sesso"));
+//
+//		utente.setPassword(req.getParameter("password"));
+//
+//		utente.setEta(req.getParameter("eta"));
+//		/*
+//		Utente utente2 = (Utente) req.getAttribute("user");
+//		if(utente2!= null ) {
+//			utente2.get
+//		}*/
+//		String pss = req.getParameter("password");
+//		String rps = req.getParameter("repeatPassword");
+//		
+//			if(pss.equals(rps)) {
+//
+//				Connection cn = null;
+//				// Connessione al DB INVIA I DATI PER REGISTRARE UN NUOVO UTENTE
+//				try {
+//					cn = ConnessioneMysql.dbconnect();
+//
+//					ConnessioneMysql.queryUpdate(cn, "INSERT INTO `Utenti` (`id`, `nome`, `cognome`, `email`, `telefono`, `sesso`, `password`, `eta`) VALUES (NULL, '"+ utente.getNome() +"', '"+ utente.getCognome() +"', '"+utente.getEmail()+"', '"+utente.getTelefono()+"', '"+utente.getSesso()+"', '"+utente.getPassword()+"', '"+utente.getEta()+"')");
+//
+//				} catch (SQLException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+//
+//				// Richiama elecoutenti in cui ce il while permette di STAMPARE
+//				try {
+//					RegisterMsql stampaUtenti = new RegisterMsql();
+//					req.setAttribute("nome", stampaUtenti.elencoUtenti().get(0).getNome());
+//				} catch (SQLException e1) {
+//					// TODO Auto-generated catch block
+//					e1.printStackTrace();
+//				}
+//
+//				nextJSP = "/profilo.jsp";
+//				
+//
+//			}else{
+//				
+//				String erroremsn; // messaggio di errore
+//				erroremsn = "Le due password non corrispondono.";
+//				req.setAttribute("error", erroremsn);
+//				nextJSP = "/credenziali_errore.jsp";
+//				
+//			}
+//			
 			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
 			dispatcher.forward(req,resp);
 		}

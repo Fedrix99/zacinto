@@ -20,7 +20,7 @@
 		</a>	
 			<div class="box-login">
 			
-				<form name="login" method="get" action="loginAccess" >
+				<form name="login" method="get" action="loginAccess" > <!-- Richiama la login access in cui ce il controllo -->
 
 
 					<p> Email: <INPUT type=email name="email" class="form-control" placeholder="Email" required > </p>
@@ -29,6 +29,8 @@
 					<p> Password: <INPUT type=password name="password" class="form-control" placeholder="Password" required> </p>
 				
 					<button type=SUBMIT > Login </button>
+					
+					<a href="http://localhost:8080/Zacinto/register">Crea un nuovo account</a>
 				
 				</form>	
 		

@@ -9,6 +9,24 @@ public class Utente {
 	private String sesso;
 	private String password;
 	private String eta;
+	
+	public Utente(int id, String nome, String cognome, String email, String telefono, String sesso, String password,
+			String eta) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.cognome = cognome;
+		this.email = email;
+		this.telefono = telefono;
+		this.sesso = sesso;
+		this.password = password;
+		this.eta = eta;
+	}
+	
+	public Utente() {
+		
+		
+	}
 	public int getId() {
 		return id;
 	}

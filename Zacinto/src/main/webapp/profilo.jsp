@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ page import="zacintoController.Utente"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,6 +9,13 @@
 <title>Profilo</title>
 </head>
 <body>
+
+	<!-- Devo importare: <@ page import="zacintoController.Utente"%> -->
+	<%
+		Utente u = (Utente) request.getAttribute("userLog");
+	%>
+	<!-- Prende la variabile nella login access -->
+
 	<div class="logo">
 
 		<img src="img/BibliotecaZacintoTrasparente.png"
@@ -34,22 +42,22 @@
 		<div class="welcome">
 
 			<h1>
-				Ciao,<%=request.getAttribute("nome")%>!
-				
+				Ciao, <%=u.getNome()%>
+
 			</h1>
 
 			<div class="dati">
 
 				<table>
 					<tr>
-						<td>Nome: <%=request.getAttribute("nome")%></td>
-						<td>Telefono: <%=request.getAttribute("telefono")%></td>
-						<td>Et&agrave;: <%=request.getAttribute("eta")%></td>
+						<td>Nome: <%=u.getNome()%> </td>
+						<td>Telefono: <%=u.getTelefono()%></td>
+						<td>Et&agrave;: <%=u.getEta()%></td>
 					</tr>
 					<tr>
-						<td>Cognome: <%=request.getAttribute("cognome")%></td>
-						<td>Sesso: <%=request.getAttribute("sesso")%></td>
-						<td>Email: <%=request.getAttribute("email")%></td>
+						<td>Cognome: <%=u.getEta()%></td>
+						<td>Sesso: <%=u.getSesso()%></td>
+						<td>Email: <%=u.getEmail()%></td>
 					</tr>
 				</table>
 

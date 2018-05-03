@@ -18,7 +18,7 @@
 		</a>	
 			<div class="box-register">
 			
-				<form name="register" method="get" action="profilo" >
+				<form name="register" method="get" action="registerAccess" >
 
 
 					<p> Nome: <input type=text name="nome" class="form-control" placeholder="Nome" required> </p>
