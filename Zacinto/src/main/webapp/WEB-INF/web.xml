@@ -11,7 +11,7 @@
 		<servlet-class>zacintoView.Login</servlet-class>
 
 	</servlet>
-	
+
 	<servlet>
 
 		<servlet-name>LoginAccess</servlet-name>
@@ -23,6 +23,13 @@
 
 		<servlet-name>Register</servlet-name>
 		<servlet-class>zacintoView.Register</servlet-class>
+
+	</servlet>
+
+	<servlet>
+
+		<servlet-name>RegisterAccess</servlet-name>
+		<servlet-class>zacintoView.RegisterAccess</servlet-class>
 
 	</servlet>
 
@@ -67,12 +74,12 @@
 		<servlet-class>zacintoView.Logout</servlet-class>
 
 	</servlet>
-	
+
 	<servlet>
-	
+
 		<servlet-name>Riepilogo</servlet-name>
-		<servlet-class>zacintoView.Riepilogo</servlet-class>	
-		
+		<servlet-class>zacintoView.Riepilogo</servlet-class>
+
 	</servlet>
 
 
@@ -85,7 +92,7 @@
 		<url-pattern>/login</url-pattern>
 
 	</servlet-mapping>
-	
+
 	<servlet-mapping>
 
 		<servlet-name>LoginAccess</servlet-name>
@@ -97,6 +104,13 @@
 
 		<servlet-name>Register</servlet-name>
 		<url-pattern>/register</url-pattern>
+
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>RegisterAccess</servlet-name>
+		<url-pattern>/registerAccess</url-pattern>
 
 	</servlet-mapping>
 
@@ -143,11 +157,11 @@
 	</servlet-mapping>
 
 	<servlet-mapping>
-	
+
 		<servlet-name>Riepilogo</servlet-name>
 		<url-pattern>/riepilogo</url-pattern>
-	
+
 	</servlet-mapping>
-	
+
 
 </web-app>

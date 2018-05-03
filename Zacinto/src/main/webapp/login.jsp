@@ -20,7 +20,7 @@
 		</a>	
 			<div class="box-login">
 			
-				<form name="login" method="get" action="loginAccess" >
+				<form name="login" method="get" action="loginAccess" > <!-- Richiama la login access in cui ce il controllo -->
 
 
 					<p> Email: <INPUT type=email name="email" class="form-control" placeholder="Email" required > </p>

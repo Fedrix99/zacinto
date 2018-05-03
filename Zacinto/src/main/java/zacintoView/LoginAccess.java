@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import zacintoModel.*;
 import zacintoController.*;
-import zacintoController.Register;
+
 
 @SuppressWarnings("serial")
 public class LoginAccess extends HttpServlet {
@@ -27,23 +27,56 @@ public class LoginAccess extends HttpServlet {
 
 		resp.setContentType("text/html"); 
 		String nextJSP;
+		String email = null;
+		String password = null;	
+		Connection cn = null;
+		ResultSet rs;
 
-		
 
-		req.setAttribute("email", new Object());
-		
-		
-		
+		email = req.getParameter("email");
+		password = req.getParameter("password");
 
+		if(email != null && password != null) {
+
+			try {
+				cn = ConnessioneMysql.dbconnect();
+				
+				//query
+				rs = ConnessioneMysql.queryRs(cn, "SELECT * FROM `utenti` WHERE email='"+ email +"' and password ='"+ password+"'");
+				rs.first();
+					
+				//Setto i parametri che passo per la sessione da loggato
+				Utente user = new Utente();
+
+				user.setEmail(rs.getString("email"));
+				user.setPassword(rs.getString("password"));
+				user.setNome(rs.getString("nome"));
+
+				
+				//Qui ci passa tutto l'utente con TUTTI i dati
+				req.setAttribute("userLog", user);
+
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} // Connessione DB
+
+
+		}else {
+
+			String erroremsn; // messaggio di errore
+			erroremsn = "Email e Password errati riprovare.";
+			req.setAttribute("error", erroremsn);
+			nextJSP = "/credenziali_errore.jsp";
+
+		}
+		
 		nextJSP = "/home.jsp";
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
 		dispatcher.forward(req,resp);
 	}
 
-	private String setEmail(String parameter) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
