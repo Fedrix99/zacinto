@@ -143,7 +143,7 @@
 				%>
 				<h2>Arrivederci...</h2>
 
-				<form name="login" method="get" action="logout">
+				<form name="logout" method="get" action="logout">
 					<button type=SUBMIT
 						style="display: block; margin: 0 auto; width: 100px;">
 						Logout</button>

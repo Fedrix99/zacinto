@@ -41,14 +41,14 @@
 
 		<div class="welcome">
 
-<!-- 			<h1> -->
-<%-- 				Ciao, <%=u.getNome()%> --%>
+			<h1>
+<%-- 				<!--  Ciao, <%=u.getNome()%> --> --%>
+					ciao, <%=request.getAttribute("userLog") %>
+			</h1>
 
-<!-- 			</h1> -->
+			<div class="dati">
 
-<!-- 			<div class="dati"> -->
-
-<!-- 				<table> -->
+				<table>
 <!-- 					<tr> -->
 <%-- 						<td>Nome: <%=u.getNome()%> </td> --%>
 <%-- 						<td>Telefono: <%=u.getTelefono()%></td> --%>
@@ -59,7 +59,7 @@
 <%-- 						<td>Sesso: <%=u.getSesso()%></td> --%>
 <%-- 						<td>Email: <%=u.getEmail()%></td> --%>
 <!-- 					</tr> -->
-<!-- 				</table> -->
+				</table>
 
 			</div>
 

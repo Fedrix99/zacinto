@@ -1,9 +1,6 @@
 package zacintoView;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,30 +9,28 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import zacintoController.Coke;
-import zacintoController.Utente;
-import zacintoModel.ConnessioneMysql;
-import zacintoModel.UtenteMysql;
 
-@SuppressWarnings("serial")
-public class Home extends HttpServlet {
+public class Logout extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String nextJSP;
-		resp.setContentType("text/html"); 
-		
-		if(Coke.controlloCookie(req) == true) {
+		String nextJSP = null;
 			
-			Coke.CreaCookie(resp, "logCookie", "ZacintoCookie");
+		Coke.EliminaCookie(resp, "logCookie" );
 		
-		}
+		String logoutmsn; // messaggio di errore
+		logoutmsn = "Scollegamento effettuato correttamente.";
+		req.setAttribute("error", logoutmsn);
+		String textpulsante;
+		textpulsante ="Vai al sito";
+		req.setAttribute("textpulsante", textpulsante);
 		
-		nextJSP = "/home.jsp";
+		
+		nextJSP = "/logout.jsp";
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
 		dispatcher.forward(req,resp);
-
-
+		
 	}
 
 	@Override
@@ -44,4 +39,6 @@ public class Home extends HttpServlet {
 		super.doPost(req, resp);
 	}
 
+	
+	
 }

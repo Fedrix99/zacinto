@@ -32,6 +32,7 @@ public class LoginAccess extends HttpServlet {
 		Connection cn = null;
 		ResultSet rs;
 
+		String id = null;
 
 		email = req.getParameter("email");
 		password = req.getParameter("password");
@@ -51,6 +52,7 @@ public class LoginAccess extends HttpServlet {
 				user.setEmail(rs.getString("email"));
 				user.setPassword(rs.getString("password"));
 				user.setNome(rs.getString("nome"));
+				user.setId(rs.getInt("id"));
 				
 				Coke.CreaCookie(resp, "logCookie", "ZacintoCookie");
 
