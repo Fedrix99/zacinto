@@ -26,7 +26,7 @@ public class LoginAccess extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		resp.setContentType("text/html"); 
-		String nextJSP;
+		String nextJSP = "/login.jsp";
 		String email = null;
 		String password = null;	
 		Connection cn = null;
@@ -43,7 +43,7 @@ public class LoginAccess extends HttpServlet {
 				
 				//query
 				rs = ConnessioneMysql.queryRs(cn, "SELECT * FROM `utenti` WHERE email='"+ email +"' and password ='"+ password+"'");
-				rs.first();
+				rs.first(); // fa controllo se la rs è piena
 					
 				//Setto i parametri che passo per la sessione da loggato
 				Utente user = new Utente();
@@ -51,10 +51,14 @@ public class LoginAccess extends HttpServlet {
 				user.setEmail(rs.getString("email"));
 				user.setPassword(rs.getString("password"));
 				user.setNome(rs.getString("nome"));
-
 				
+				Coke.CreaCookie(resp, "logCookie", "ZacintoCookie");
+
+				nextJSP ="/home.jsp";
+			
 				//Qui ci passa tutto l'utente con TUTTI i dati
 				req.setAttribute("userLog", user);
+				
 
 				
 			} catch (SQLException e) {
@@ -63,16 +67,16 @@ public class LoginAccess extends HttpServlet {
 			} // Connessione DB
 
 
-		}else {
-
-			String erroremsn; // messaggio di errore
-			erroremsn = "Email e Password errati riprovare.";
-			req.setAttribute("error", erroremsn);
-			nextJSP = "/credenziali_errore.jsp";
-
 		}
+
+//			String erroremsn; // messaggio di errore
+//			erroremsn = "Email e Password errati riprovare.";
+//			req.setAttribute("error", erroremsn);
+//			nextJSP = "/credenziali_errore.jsp";
+
 		
-		nextJSP = "/home.jsp";
+		
+	//	nextJSP = "/login.jsp";
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
 		dispatcher.forward(req,resp);
 	}

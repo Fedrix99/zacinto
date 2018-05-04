@@ -41,25 +41,25 @@
 
 		<div class="welcome">
 
-			<h1>
-				Ciao, <%=u.getNome()%>
+<!-- 			<h1> -->
+<%-- 				Ciao, <%=u.getNome()%> --%>
 
-			</h1>
+<!-- 			</h1> -->
 
-			<div class="dati">
+<!-- 			<div class="dati"> -->
 
-				<table>
-					<tr>
-						<td>Nome: <%=u.getNome()%> </td>
-						<td>Telefono: <%=u.getTelefono()%></td>
-						<td>Et&agrave;: <%=u.getEta()%></td>
-					</tr>
-					<tr>
-						<td>Cognome: <%=u.getEta()%></td>
-						<td>Sesso: <%=u.getSesso()%></td>
-						<td>Email: <%=u.getEmail()%></td>
-					</tr>
-				</table>
+<!-- 				<table> -->
+<!-- 					<tr> -->
+<%-- 						<td>Nome: <%=u.getNome()%> </td> --%>
+<%-- 						<td>Telefono: <%=u.getTelefono()%></td> --%>
+<%-- 						<td>Et&agrave;: <%=u.getEta()%></td> --%>
+<!-- 					</tr> -->
+<!-- 					<tr> -->
+<%-- 						<td>Cognome: <%=u.getEta()%></td> --%>
+<%-- 						<td>Sesso: <%=u.getSesso()%></td> --%>
+<%-- 						<td>Email: <%=u.getEmail()%></td> --%>
+<!-- 					</tr> -->
+<!-- 				</table> -->
 
 			</div>
 

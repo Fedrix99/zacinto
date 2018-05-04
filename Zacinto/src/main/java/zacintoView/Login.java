@@ -27,6 +27,7 @@ public class Login extends HttpServlet {
 
 		resp.setContentType("text/html"); 
 		String nextJSP;
+
 				
 		nextJSP = "/login.jsp";
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
