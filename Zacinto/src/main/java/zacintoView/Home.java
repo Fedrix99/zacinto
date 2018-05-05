@@ -26,8 +26,8 @@ public class Home extends HttpServlet {
 		resp.setContentType("text/html"); 
 		
 		if(Coke.controlloCookie(req) == true) {
-			
-			Coke.CreaCookie(resp, "logCookie", "ZacintoCookie");
+							
+	
 		
 		}
 		

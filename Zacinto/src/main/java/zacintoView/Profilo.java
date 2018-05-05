@@ -9,11 +9,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.mysql.jdbc.log.Log;
+
 import zacintoController.Coke;
 import zacintoController.Register; // Classe dell'altro pacchetto
 import zacintoController.Utente;
 import zacintoModel.ConnessioneMysql;
+import zacintoModel.ProdottoMysql;
 import zacintoModel.RegisterMsql;
+import zacintoModel.UtenteMysql;
 
 /**
  * @author Federico Amendolagine
@@ -28,13 +32,13 @@ public class Profilo extends HttpServlet {
 		resp.setContentType("text/html"); 
 		String nextJSP;
 		
-		Utente u = (Utente) req.getAttribute("userLog");
 
+
+		
 		if(Coke.controlloCookie(req) == true) {
-			
-			//Provo a metere la query che prende i dati e li setto nel user log
+		
 			nextJSP = "/profilo.jsp";
-
+			
 			
 		}else {
 			

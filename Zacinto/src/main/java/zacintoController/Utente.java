@@ -2,13 +2,18 @@ package zacintoController;
 
 public class Utente {
 	private int id;
-	private String nome;
+	private String nome = "";
 	private String cognome;
 	private String email;
 	private String telefono;
 	private String sesso;
 	private String password;
 	private String eta;
+	
+	public Utente() {
+		
+		
+	}
 	
 	public Utente(int id, String nome, String cognome, String email, String telefono, String sesso, String password,
 			String eta) {
@@ -22,16 +27,11 @@ public class Utente {
 		this.password = password;
 		this.eta = eta;
 	}
-	
-	public Utente() {
-		
-		
-	}
 	public int getId() {
 		return id;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public int setId(int id) {
+		return this.id = id;
 	}
 	public String getNome() {
 		return nome;
@@ -75,4 +75,7 @@ public class Utente {
 	public void setEta(String eta) {
 		this.eta = eta;
 	}
+		
+
+	
 }

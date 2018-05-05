@@ -10,12 +10,6 @@
 </head>
 <body>
 
-	<!-- Devo importare: <@ page import="zacintoController.Utente"%> -->
-	<%
-		Utente u = (Utente) request.getAttribute("userLog");
-	%>
-	<!-- Prende la variabile nella login access -->
-
 	<div class="logo">
 
 		<img src="img/BibliotecaZacintoTrasparente.png"
@@ -42,8 +36,8 @@
 		<div class="welcome">
 
 			<h1>
-<%-- 				<!--  Ciao, <%=u.getNome()%> --> --%>
-					ciao, <%=request.getAttribute("userLog") %>
+
+					ciao, <%=session.getAttribute("nome")%>
 			</h1>
 
 			<div class="dati">

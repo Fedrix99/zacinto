@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ page import="zacintoController.Utente"%>
+<%@ page session="true" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,12 +10,6 @@
 <title>Zacinto Home</title>
 </head>
 <body>
-	<!-- Devo importare: <@ page import="zacintoController.Utente"%> -->
-	<%
-		Utente u = (Utente) request.getAttribute("userLog");
-		
-	%>
-	<!-- Prende la variabile nella login access -->
 
 	<div class="logo">
 
@@ -104,23 +99,10 @@
 
 			<div>
 
-				<%
-					if (u != null) {
-				%>
-				<!-- Quando sei loggato: -->
 				<h1>
-					Benvenuto,<%=u.getNome()%>
+					Benvenuto <%=session.getAttribute("nome")%>
 					<!-- Prende il nome dell'utente loggato -->
 				</h1>
-				<%
-					} else {
-				%>
-				<!-- Quando non sei loggato: -->
-				<h1>Benvenuto</h1>
-				<%
-					}
-				%>
-
 
 				<form name="login" method="get" action="login">
 					<button type=SUBMIT
@@ -138,9 +120,7 @@
 
 
 			<div>
-				<%
-					if (u != null) {
-				%>
+
 				<h2>Arrivederci...</h2>
 
 				<form name="logout" method="get" action="logout">
@@ -148,11 +128,7 @@
 						style="display: block; margin: 0 auto; width: 100px;">
 						Logout</button>
 				</form>
-				<%
-					} else {
-				%>
 
-				<% } %>
 			</div>
 		</div>
 

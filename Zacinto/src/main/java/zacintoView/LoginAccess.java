@@ -4,17 +4,19 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Set;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-
+import javax.servlet.http.HttpSession;
 
 import zacintoModel.*;
 import zacintoController.*;
+import zacintoController.Prodotto;
 
 
 @SuppressWarnings("serial")
@@ -26,17 +28,19 @@ public class LoginAccess extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		resp.setContentType("text/html"); 
+		
 		String nextJSP = "/login.jsp";
 		String email = null;
 		String password = null;	
+
 		Connection cn = null;
 		ResultSet rs;
-
-		String id = null;
-
+		
 		email = req.getParameter("email");
 		password = req.getParameter("password");
-
+		
+		Utente utentelog = new Utente();
+		
 		if(email != null && password != null) {
 
 			try {
@@ -45,40 +49,39 @@ public class LoginAccess extends HttpServlet {
 				//query
 				rs = ConnessioneMysql.queryRs(cn, "SELECT * FROM `utenti` WHERE email='"+ email +"' and password ='"+ password+"'");
 				rs.first(); // fa controllo se la rs è piena
-					
-				//Setto i parametri che passo per la sessione da loggato
-				Utente user = new Utente();
 
-				user.setEmail(rs.getString("email"));
-				user.setPassword(rs.getString("password"));
-				user.setNome(rs.getString("nome"));
-				user.setId(rs.getInt("id"));
+				utentelog.setId(rs.getInt("id"));
+				utentelog.setNome(rs.getString("nome"));
+				utentelog.setCognome(rs.getString("cognome"));
+				utentelog.setEmail(rs.getString("email"));
+				utentelog.setTelefono(rs.getString("telefono"));
+				utentelog.setEta(rs.getString("eta"));
+				utentelog.setSesso(rs.getString("sesso"));
+
+					System.out.println("cc");
+					Coke.CreaCookie(resp, "logCookie", "ZacintoCookie");
 				
-				Coke.CreaCookie(resp, "logCookie", "ZacintoCookie");
+					HttpSession session = req.getSession();
+					session.setAttribute("id", utentelog.getId());
+					session.setAttribute("nome", utentelog.getNome());
+					session.setAttribute("cognome", utentelog.getCognome());
+					session.setAttribute("email", utentelog.getEmail());
+					session.setAttribute("telefono", utentelog.getTelefono());
+					session.setAttribute("eta", utentelog.getEta());
+					session.setAttribute("sesso", utentelog.getSesso());
 
-				nextJSP ="/home.jsp";
-			
-				//Qui ci passa tutto l'utente con TUTTI i dati
-				req.setAttribute("userLog", user);
+					nextJSP = "/home.jsp";
 				
-
 				
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} // Connessione DB
 
-
 		}
 
-//			String erroremsn; // messaggio di errore
-//			erroremsn = "Email e Password errati riprovare.";
-//			req.setAttribute("error", erroremsn);
-//			nextJSP = "/credenziali_errore.jsp";
-
 		
 		
-	//	nextJSP = "/login.jsp";
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
 		dispatcher.forward(req,resp);
 	}
