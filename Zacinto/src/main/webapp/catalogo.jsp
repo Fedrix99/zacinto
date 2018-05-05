@@ -35,9 +35,13 @@
 		<div class="ricerca">
 
 			<div class="campo-ricerca">
-				<label for="s" class="hide">Cerca: </label> <input type="search"
-					id="s" name="s" placeholder="Cerca nella biblioteca"> <input
-					type="submit" id="sub" name="sub" value="Cerca">
+				
+<!-- 				<label for=search> Cerca</label> -->
+<!-- 				<input type="search" id="search" name="cerca" class="txt" size="20" placeholder="Cerca nella Bilioteca"> -->
+<!-- 				<input type="submit" class="btn" value="Cerca"> -->
+
+					<form name="ricerca" method="get" action="risultatiricerca"> <label for=search> Cerca</label> <input type="search" id="search" name="cerca" class="txt" size="20px" placeholder="Cerca nella Bilioteca"> <button type=SUBMIT > Invia </button></form> 
+				
 			</div>
 
 			<h2>Filtri:</h2>
@@ -45,11 +49,12 @@
 			<div class="filtri">
 
 				<form action="">
-						
-						<br> <input type="checkbox" name="Genere" value="Genere" /> Genere<br /> 
-						<br> <input type="checkbox" name="Autore" value="Autore" /> Autore<br />
-						<br> <input type="checkbox" name="Eta" value="Eta" /> Et&agrave; <br />
-					
+
+					<br> <input type="checkbox" name="Genere" value="Genere" />
+					Genere<br /> <br> <input type="checkbox" name="Autore"
+						value="Autore" /> Autore<br /> <br> <input type="checkbox"
+						name="Eta" value="Eta" /> Et&agrave; <br />
+
 				</form>
 
 
@@ -64,7 +69,7 @@
 			<div class="prodotto_uno">
 
 				<h2>Libri</h2>
-					<a href="prodotto">Paulu Piulu</a>
+				<a href="prodotto">Paulu Piulu</a>
 			</div>
 
 			<div class="prodotto_due">
