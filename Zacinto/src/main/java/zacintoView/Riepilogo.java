@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import zacintoController.Libro;
 import zacintoModel.ConnessioneMysql;
 
 public class Riepilogo extends HttpServlet {
@@ -20,15 +21,14 @@ public class Riepilogo extends HttpServlet {
 		resp.setContentType("text/html"); 
 		String nextJSP;
 		
-		Connection cn = null;
 		
-		try { // Connessione DB
-			cn = ConnessioneMysql.dbconnect();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		
+		String codice = req.getParameter("codice");
+		System.out.println(""+codice);
+		if(codice != null) {
+			
+			req.setAttribute("quantita", Libro.calcoloQuantita());
 		}
-		
 		
 		
 		nextJSP = "/riepilogo.jsp";

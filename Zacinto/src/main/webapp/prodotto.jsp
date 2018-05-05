@@ -68,7 +68,7 @@
 
 			<h2>Disponibilita'</h2>
 
-			<p>Rimasti: <p>
+			<p>Rimasti: <%=request.getAttribute("quantita")%><p>
 
 			<h2>Codice prodotto </h2>
 			
@@ -77,7 +77,7 @@
 			<h2>Prenotazione </h2>
 				<form name="prenota" method="get" action="riepilogo">
 				<p> Inserisci il codice del prodotto: <p>
-				<INPUT type=text name="nomeprodotto" class="form-control" placeholder="Nome Prodotto" required > <button type=SUBMIT>Prenota</button>
+				<INPUT type=text name="codice" class="form-control" placeholder="Nome Prodotto" required > <button type=SUBMIT>Prenota</button>
 				
 				
 				</form>

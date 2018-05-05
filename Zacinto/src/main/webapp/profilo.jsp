@@ -37,7 +37,7 @@
 
 			<h1>
 
-					ciao, <%=session.getAttribute("nome")%>
+					Ciao, <%=session.getAttribute("nome")%>
 			</h1>
 
 			<div class="dati">

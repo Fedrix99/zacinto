@@ -22,10 +22,11 @@ public class Prodotto extends HttpServlet {
 		resp.setContentType("text/html"); 
 
 		String nextJSP = "/credenziali_errore.jsp";
-
-
+		//Prende la quantitat dalla classe libro che è di tipo statico		
+		req.setAttribute("quantita", Libro.getQuantita());
+		
 		if(Coke.controlloCookie(req) == true) {
-
+				
 			nextJSP = "/prodotto.jsp";
 
 			// Richiama elecoprodotti in cui ce il while permette di STAMPARE
