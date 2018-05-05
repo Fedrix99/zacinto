@@ -64,7 +64,7 @@
 			<div class="prodotto_uno">
 
 				<h2>Libri</h2>
-				<p> <a href="http://localhost:8080/Zacinto/prodotto">Paulo Piulu</a></p>
+				<p> <a href="prodotto">Paulo Piulu</a></p>
 			</div>
 
 			<div class="prodotto_due">

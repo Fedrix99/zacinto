@@ -20,23 +20,43 @@ public class Prodotto extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		resp.setContentType("text/html"); 
-				
-		// Richiama elecoprodotti in cui ce il while permette di STAMPARE
-		try {
-			ProdottoMysql stampaProdotto = new ProdottoMysql();
-			req.setAttribute("nomeProdotto", stampaProdotto.elencoProdotti().get(0).getNomeProdotto());
-			req.setAttribute("autore", stampaProdotto.elencoProdotti().get(0).getAutore());
-			req.setAttribute("romanzo", stampaProdotto.elencoProdotti().get(0).getGenere());
-		} catch (SQLException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
+
+		String nextJSP = "/credenziali_errore.jsp";
+
+		if(Coke.controlloCookie(req) == true) {
+
+			nextJSP = "/prodotto.jsp";
+
+			// Richiama elecoprodotti in cui ce il while permette di STAMPARE
+			try {
+				ProdottoMysql stampaProdotto = new ProdottoMysql();
+				req.setAttribute("nomeProdotto", stampaProdotto.elencoProdotti().get(0).getNomeProdotto());
+				req.setAttribute("autore", stampaProdotto.elencoProdotti().get(0).getAutore());
+				req.setAttribute("romanzo", stampaProdotto.elencoProdotti().get(0).getGenere());
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+
+		}else {
+
+			String erroremsn; // messaggio di errore
+			erroremsn = "Per visualizzare la pagina del prodotto devi essere registrato.";
+			req.setAttribute("error", erroremsn);
+			String pulsanteLogin;
+			pulsanteLogin ="Login";
+			req.setAttribute("textpulsante", pulsanteLogin);
+			nextJSP = "/credenziali_errore.jsp";
+
 		}
-		
-		String nextJSP = "/prodotto.jsp";
+
+
+
+
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
 		dispatcher.forward(req,resp);
 	}
-	
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
