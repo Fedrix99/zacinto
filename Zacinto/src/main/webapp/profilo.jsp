@@ -43,16 +43,16 @@
 			<div class="dati">
 
 				<table>
-<!-- 					<tr> -->
-<%-- 						<td>Nome: <%=u.getNome()%> </td> --%>
-<%-- 						<td>Telefono: <%=u.getTelefono()%></td> --%>
-<%-- 						<td>Et&agrave;: <%=u.getEta()%></td> --%>
-<!-- 					</tr> -->
-<!-- 					<tr> -->
-<%-- 						<td>Cognome: <%=u.getEta()%></td> --%>
-<%-- 						<td>Sesso: <%=u.getSesso()%></td> --%>
-<%-- 						<td>Email: <%=u.getEmail()%></td> --%>
-<!-- 					</tr> -->
+					<tr>
+						<td>Nome: <%=session.getAttribute("nome")%> </td>
+						<td>Telefono: <%=session.getAttribute("telefono")%></td>
+						<td>Et&agrave;: <%=session.getAttribute("eta")%></td>
+					</tr>
+					<tr>
+						<td>Cognome: <%=session.getAttribute("cognome")%></td>
+						<td>Sesso: <%=session.getAttribute("sesso")%></td>
+						<td>Email: <%=session.getAttribute("email")%></td>
+					</tr>
 				</table>
 
 			</div>

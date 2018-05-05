@@ -48,8 +48,10 @@ public class LoginAccess extends HttpServlet {
 				
 				//query
 				rs = ConnessioneMysql.queryRs(cn, "SELECT * FROM `utenti` WHERE email='"+ email +"' and password ='"+ password+"'");
+				
 				rs.first(); // fa controllo se la rs è piena
-
+				
+				//Setto i valori del db
 				utentelog.setId(rs.getInt("id"));
 				utentelog.setNome(rs.getString("nome"));
 				utentelog.setCognome(rs.getString("cognome"));
@@ -57,10 +59,11 @@ public class LoginAccess extends HttpServlet {
 				utentelog.setTelefono(rs.getString("telefono"));
 				utentelog.setEta(rs.getString("eta"));
 				utentelog.setSesso(rs.getString("sesso"));
-
-					System.out.println("cc");
-					Coke.CreaCookie(resp, "logCookie", "ZacintoCookie");
 				
+					//Creo il cookie
+					Coke.CreaCookie(resp, "logCookie", "ZacintoCookie");
+					
+					//Creo e setto la sessione di ogni oggetto
 					HttpSession session = req.getSession();
 					session.setAttribute("id", utentelog.getId());
 					session.setAttribute("nome", utentelog.getNome());
@@ -69,10 +72,9 @@ public class LoginAccess extends HttpServlet {
 					session.setAttribute("telefono", utentelog.getTelefono());
 					session.setAttribute("eta", utentelog.getEta());
 					session.setAttribute("sesso", utentelog.getSesso());
-
+				
 					nextJSP = "/home.jsp";
-				
-				
+					
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

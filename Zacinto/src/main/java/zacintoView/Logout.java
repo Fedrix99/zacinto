@@ -22,10 +22,10 @@ public class Logout extends HttpServlet {
 		Utente utentelog = new Utente();
 		
 		Coke.EliminaCookie(resp, "logCookie" );
-		
+		//Creo e distruggo la sessione e rimuovo il nome.
 		HttpSession session = req.getSession();
 		session.removeAttribute("nome");
-		
+		//Setto un valore vuoto per non fare vedere il nome Benvenuto ""
 		session.setAttribute("nome", utentelog.getNome());
 		
 		String logoutmsn; // messaggio di errore

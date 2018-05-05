@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import zacintoController.Coke;
 import zacintoController.Utente;
 import zacintoModel.ConnessioneMysql;
-import zacintoModel.UtenteMysql;
+
 
 @SuppressWarnings("serial")
 public class Home extends HttpServlet {
@@ -27,7 +27,7 @@ public class Home extends HttpServlet {
 		
 		if(Coke.controlloCookie(req) == true) {
 							
-	
+			
 		
 		}
 		

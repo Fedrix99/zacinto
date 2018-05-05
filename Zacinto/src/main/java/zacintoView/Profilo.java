@@ -1,7 +1,6 @@
 package zacintoView;
 
 import java.io.IOException;
-import java.sql.*;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,15 +8,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mysql.jdbc.log.Log;
+
 
 import zacintoController.Coke;
-import zacintoController.Register; // Classe dell'altro pacchetto
-import zacintoController.Utente;
-import zacintoModel.ConnessioneMysql;
-import zacintoModel.ProdottoMysql;
-import zacintoModel.RegisterMsql;
-import zacintoModel.UtenteMysql;
+
+
 
 /**
  * @author Federico Amendolagine
@@ -32,14 +27,10 @@ public class Profilo extends HttpServlet {
 		resp.setContentType("text/html"); 
 		String nextJSP;
 		
-
-
-		
 		if(Coke.controlloCookie(req) == true) {
 		
 			nextJSP = "/profilo.jsp";
-			
-			
+				
 		}else {
 			
 			String erroremsn; // messaggio di errore
@@ -49,7 +40,6 @@ public class Profilo extends HttpServlet {
 			pulsanteLogin ="Login";
 			req.setAttribute("textpulsante", pulsanteLogin);
 			nextJSP = "/credenziali_errore.jsp";
-			
 			
 		}
 
