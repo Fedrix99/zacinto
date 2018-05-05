@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import zacintoController.*;
 import zacintoModel.ProdottoMysql;
@@ -22,8 +23,10 @@ public class Prodotto extends HttpServlet {
 		resp.setContentType("text/html"); 
 
 		String nextJSP = "/credenziali_errore.jsp";
-		//Prende la quantitat dalla classe libro che è di tipo statico		
-		req.setAttribute("quantita", Libro.getQuantita());
+		//Prende la quantita dalla classe libro che è di tipo statico		
+		
+		HttpSession session = req.getSession();		
+		session.getAttribute("quantita");
 		
 		if(Coke.controlloCookie(req) == true) {
 				

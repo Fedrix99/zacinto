@@ -9,6 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import zacintoController.Libro;
 import zacintoModel.ConnessioneMysql;
@@ -21,13 +22,13 @@ public class Riepilogo extends HttpServlet {
 		resp.setContentType("text/html"); 
 		String nextJSP;
 		
-		
-		
 		String codice = req.getParameter("codice");
-		System.out.println(""+codice);
+	
 		if(codice != null) {
+			HttpSession session = req.getSession();
 			
-			req.setAttribute("quantita", Libro.calcoloQuantita());
+			session.setAttribute("quantita", Libro.calcoloQuantita());
+			
 		}
 		
 		

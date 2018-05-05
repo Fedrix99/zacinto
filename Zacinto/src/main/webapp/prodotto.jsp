@@ -68,7 +68,7 @@
 
 			<h2>Disponibilita'</h2>
 
-			<p>Rimasti: <%=request.getAttribute("quantita")%><p>
+			<p>Rimasti: <%=session.getAttribute("quantita")%><p>
 
 			<h2>Codice prodotto </h2>
 			
