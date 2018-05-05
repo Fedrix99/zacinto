@@ -64,7 +64,7 @@
 			<div class="prodotto_uno">
 
 				<h2>Libri</h2>
-				<p> <a href="prodotto">Paulo Piulu</a></p>
+					<a href="prodotto">Paulu Piulu</a>
 			</div>
 
 			<div class="prodotto_due">
