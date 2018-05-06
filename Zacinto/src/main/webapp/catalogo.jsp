@@ -40,7 +40,7 @@
 <!-- 				<input type="search" id="search" name="cerca" class="txt" size="20" placeholder="Cerca nella Bilioteca"> -->
 <!-- 				<input type="submit" class="btn" value="Cerca"> -->
 
-					<form name="ricerca" method="get" action="risultatiricerca"> <label for=search> Cerca</label> <input type="search" id="search" name="cerca" class="txt" size="20px" placeholder="Cerca nella Bilioteca"> <button type=SUBMIT > Invia </button></form> 
+					<form name="ricerca" method="get" action="risultatiRicerca"> <label for=search> Cerca</label> <input type="search" id="search" name="cerca" class="txt" size="20px" placeholder="Cerca nella Bilioteca"> <button type=SUBMIT > Invia </button></form> 
 				
 			</div>
 

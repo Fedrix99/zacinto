@@ -81,6 +81,13 @@
 		<servlet-class>zacintoView.Riepilogo</servlet-class>
 
 	</servlet>
+	
+		<servlet>
+
+		<servlet-name>Ricerca</servlet-name>
+		<servlet-class>zacintoView.RisultatiRicerca</servlet-class>
+
+	</servlet>
 
 
 
@@ -164,6 +171,11 @@
 
 	</servlet-mapping>
 
-	
+		<servlet-mapping>
+
+		<servlet-name>Ricerca</servlet-name>
+		<url-pattern>/risultatiricerca</url-pattern>
+
+	</servlet-mapping>
 
 </web-app>
