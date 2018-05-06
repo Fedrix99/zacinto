@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.sun.crypto.provider.RSACipher;
+
+import zacintoController.Prodotto;
 import zacintoModel.ConnessioneMysql;
 
 public class RisultatiRicerca extends HttpServlet {
@@ -22,20 +25,36 @@ public class RisultatiRicerca extends HttpServlet {
 		resp.setContentType("text/html"); 
 		String nextJSP;
 		
-//		Connection cn = null;
-//		ResultSet rs = null;
-//		
-//		String cerca = req.getParameter("cerca");
-//		System.out.println(""+cerca);
-//		//query
-//		try {
-//			cn = ConnessioneMysql.dbconnect();
-//			rs = ConnessioneMysql.queryRs(cn, "SELECT * FROM `prodotti` WHERE nomeProdotto='"+ cerca +"'");
-//			rs.first();
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		Connection cn = null;
+		ResultSet rs = null;
+		
+		Prodotto rscerca = new Prodotto();
+		
+		String cerca = req.getParameter("cerca");
+		
+		//query
+		try {
+			cn = ConnessioneMysql.dbconnect();
+			rs = ConnessioneMysql.queryRs(cn, "SELECT * FROM `prodotti` WHERE nomeProdotto='"+ cerca +"'");
+			rs.first();
+			
+			//Setto i valori del db
+			rscerca.setId(rs.getInt("id"));
+			rscerca.setNomeProdotto(rs.getString("nomeProdotto"));
+			rscerca.setAutore(rs.getString("autore"));
+			rscerca.setEta(rs.getInt("eta"));
+			System.out.println(""+rscerca.getNomeProdotto());
+			//Setto i valori degli attributi
+			req.setAttribute("nomeProdotto", rscerca.getNomeProdotto());
+			req.setAttribute("genere", rscerca.getGenere());
+			req.setAttribute("autore", rscerca.getAutore());
+			req.setAttribute("codice", rscerca.getId());
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		
 		nextJSP="/risultatiRicerca.jsp";

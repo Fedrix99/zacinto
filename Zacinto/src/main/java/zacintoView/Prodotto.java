@@ -37,7 +37,7 @@ public class Prodotto extends HttpServlet {
 				ProdottoMysql stampaProdotto = new ProdottoMysql();
 				req.setAttribute("nomeProdotto", stampaProdotto.elencoProdotti().get(0).getNomeProdotto());
 				req.setAttribute("autore", stampaProdotto.elencoProdotti().get(0).getAutore());
-				req.setAttribute("romanzo", stampaProdotto.elencoProdotti().get(0).getGenere());
+				req.setAttribute("genere", stampaProdotto.elencoProdotti().get(0).getGenere());
 				req.setAttribute("codice", stampaProdotto.elencoProdotti().get(0).getId());
 			} catch (SQLException e1) {
 				// TODO Auto-generated catch block

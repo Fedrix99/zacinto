@@ -52,7 +52,7 @@
 				<table>
 					<tr>
 						<td>Genere</td>
-						<td><%=request.getAttribute("romanzo")%></td>
+						<td><%=request.getAttribute("genere")%></td>
 					</tr>
 					<tr>
 						<td>Autore</td>
