@@ -81,11 +81,18 @@
 		<servlet-class>zacintoView.Riepilogo</servlet-class>
 
 	</servlet>
-	
-		<servlet>
+
+	<servlet>
 
 		<servlet-name>Ricerca</servlet-name>
 		<servlet-class>zacintoView.RisultatiRicerca</servlet-class>
+
+	</servlet>
+
+	<servlet>
+
+		<servlet-name>DoveSiamo</servlet-name>
+		<servlet-class>zacintoView.DoveSiamo</servlet-class>
 
 	</servlet>
 
@@ -96,7 +103,7 @@
 
 	<servlet-mapping>
 
-		<servlet-name>Login</servlet-name> 
+		<servlet-name>Login</servlet-name>
 		<url-pattern>/login</url-pattern>
 
 	</servlet-mapping>
@@ -171,10 +178,17 @@
 
 	</servlet-mapping>
 
-		<servlet-mapping>
+	<servlet-mapping>
 
 		<servlet-name>Ricerca</servlet-name>
 		<url-pattern>/risultatiricerca</url-pattern>
+
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>DoveSiamo</servlet-name>
+		<url-pattern>/dovesiamo</url-pattern>
 
 	</servlet-mapping>
 

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ page import="zacintoController.Utente"%>
-<%@ page session="true" %>
+<%@ page session="true"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -20,7 +20,8 @@
 
 	</div>
 
-	<div class="menu"> <!-- Bottoni del menu --> 
+	<div class="menu">
+		<!-- Bottoni del menu -->
 
 		<ul id="menu">
 			<li><a href="http://localhost:8080/Zacinto/home">Home</a></li>
@@ -34,26 +35,29 @@
 
 	<div class="conteiner-home">
 
-		<div class="news"> <!-- Sezione news -->
+		<div class="news">
+			<!-- Sezione news -->
 
 			<h1>NEWS</h1>
 
-			<div class="news_uno"> <!-- Blocchi -->
+			<div class="news_uno">
+				<!-- Blocchi -->
 
 				<h2>Paulu Piulu</h2>
-				<a href="prodotto">Paulu Piulu</a>
+				Giorgio Morale ritorna in campo con: <a href="prodotto">Paulu
+						Piulu</a>
 			</div>
 
 			<div class="news_due">
 
-				<h2>Nuova uscita</h2>
-
+				<h2>Progetti</h2>
+				<p> Cosenga del progetto 10/05/2018</p>
 			</div>
 
 			<div class="news_tre">
 
-				<h2>Nuova uscita</h2>
-
+				<h2>Record Mondiale</h2>
+ 				<p> La Biblioteca Zacinto batte ogni record: 100.000 visitatori al giorno</p>
 
 			</div>
 
@@ -77,39 +81,47 @@
 
 			</div>
 
-			<div class="ultime_news"> <!-- Ultima ora -->
+			<div class="ultime_news">
+				<!-- Ultima ora -->
 
 				<h2>Ultima ora</h2>
-				<marquee behavior="slide" direction="left">Giorgio Morale ritorna in campo con: <a href="prodotto">Paulu Piulu</a>;	  Cosenga del progetto 10/05/2018;	 La Biblioteca Zacinto batte ogni record: 100.000 visitatori al giorno</marquee>
+				<marquee behavior="slide" direction="left">
+					Giorgio Morale ritorna in campo con: <a href="prodotto">Paulu
+						Piulu</a>; Cosenga del progetto 10/05/2018; La Biblioteca Zacinto
+					batte ogni record: 100.000 visitatori al giorno
+				</marquee>
 
 			</div>
 
 
 		</div>
 
-		<div class="link"> <!-- Sezione link -->
+		<div class="link">
+			<!-- Sezione link -->
 
 			<h2>LINK</h2>
 			<div class="link_attivi">
-				<li><a href="#">Dove siamo?</a></li>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
+				<li><a href="http://localhost:8080/Zacinto/dovesiamo">Dove siamo?</a></li>
 			</div>
 
 			<div>
-						<!-- Sezione login,register -->
+				<!-- Sezione login,register -->
 				<h1>
-					Benvenuto <%=session.getAttribute("nome")%>
+					Benvenuto
+					<%=session.getAttribute("nome")%>
 					<!-- Prende il nome dell'utente loggato -->
 				</h1>
 
-				<form name="login" method="get" action="login"> <!-- Pulsante login -->
+
+				<form name="login" method="get" action="login">
+					<!-- Pulsante login -->
 					<button type=SUBMIT
 						style="display: block; margin-left: auto; margin-right: auto; width: 100px;">
 						Login</button>
 				</form>
 
-				<form name="register" method="get" action="register"> <!-- Pulsante register -->
+				<form name="register" method="get" action="register">
+					<!-- Pulsante register -->
 					<button type=SUBMIT
 						style="display: block; margin-left: auto; margin-right: auto; margin-top: 5px; width: 100px;">
 						Register</button>
@@ -120,15 +132,21 @@
 
 			<div>
 
-				<h2>Arrivederci...</h2> <!-- Sezione logout -->
 
-				<form name="logout" method="get" action="logout"> <!-- Pulsante logout -->
+
+				<h2>Arrivederci...</h2>
+				<!-- Sezione logout -->
+
+				<form name="logout" method="get" action="logout">
+					<!-- Pulsante logout -->
 					<button type=SUBMIT
 						style="display: block; margin: 0 auto; width: 100px;">
 						Logout</button>
 				</form>
 
+
 			</div>
+
 		</div>
 
 	</div>
