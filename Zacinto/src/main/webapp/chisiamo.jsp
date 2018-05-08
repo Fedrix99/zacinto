@@ -30,9 +30,9 @@
 		</ul>
 	</div>
 
-	<div class="conteiner-chisiamo">
+	<div class="conteiner-grande">
 
-		<div class="chisiamo">
+		<div class="conteiner">
 
 			<h1>Chi siamo?</h1>
 			<p> Siamo tre studenti dell'istituto IIS Giorgi Milano, che hanno realizzato un applicativo web per una Biblioteca.	</p>
