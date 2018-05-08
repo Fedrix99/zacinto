@@ -104,6 +104,14 @@
 	</servlet>
 
 
+	<servlet>
+
+		<servlet-name>Contatti</servlet-name>
+		<servlet-class>zacintoView.Contatti</servlet-class>
+
+	</servlet>
+
+
 	<!-- Servlet Mapping -->
 
 
@@ -197,11 +205,18 @@
 		<url-pattern>/dovesiamo</url-pattern>
 
 	</servlet-mapping>
-	
-		<servlet-mapping>
+
+	<servlet-mapping>
 
 		<servlet-name>ChiSiamo</servlet-name>
 		<url-pattern>/chisiamo</url-pattern>
+
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>Contatti</servlet-name>
+		<url-pattern>/contatti</url-pattern>
 
 	</servlet-mapping>
 

@@ -35,8 +35,8 @@
 		<div class="conteiner">
 
 			<h1>Chi siamo?</h1>
-			<p> Siamo tre studenti dell'istituto IIS Giorgi Milano, che hanno realizzato un applicativo web per una Biblioteca.	</p>
-			<p> Autori del progetto: Federico Amendolagine, Marcello Messa, Mahmoud Youssef. </p>
+			<p style="text-align: center;"> Siamo tre studenti dell'istituto IIS Giorgi Milano, che hanno realizzato un applicativo web per una Biblioteca.	</p>
+			<p style="text-align: center;"> Autori del progetto: Federico Amendolagine, Marcello Messa, Mahmoud Youssef. </p>
 		
 		</div>
 		

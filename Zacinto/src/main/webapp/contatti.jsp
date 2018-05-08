@@ -35,17 +35,24 @@
 		<div class="conteiner">
 
 			<h1>Contatti</h1>
+			
 			<table>
+			<p style="text-align: center;"> Per qualsiasi informazione/problema scrivici un email. </p>
 				<tr>
-					<td>Nome: <%=session.getAttribute("nome")%>
-					</td>
-					<td>Telefono: <%=session.getAttribute("telefono")%></td>
-					<td>Et&agrave;: <%=session.getAttribute("eta")%></td>
+					<td>Nome</td>
+					<td>Email</td>
 				</tr>
 				<tr>
-					<td>Cognome: <%=session.getAttribute("cognome")%></td>
-					<td>Sesso: <%=session.getAttribute("sesso")%></td>
-					<td>Email: <%=session.getAttribute("email")%></td>
+					<td>Federico Amendolagine</td>
+					<td>federico.amendolagine@zacinto.net</td>
+				</tr>
+				<tr>
+					<td>Marcello Messa</td>
+					<td>marcello.messa@zacinto.net</td>
+				</tr>
+				<tr>
+					<td>Mahmoud Youssef</td>
+					<td>mahmoud.youssef@zacinto.net</td>
 				</tr>
 			</table>
 		</div>
