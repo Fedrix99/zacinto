@@ -27,7 +27,7 @@
 			<li><a href="http://localhost:8080/Zacinto/home">Home</a></li>
 			<li><a href="http://localhost:8080/Zacinto/catalogo">Catalogo</a></li>
 			<li><a href="http://localhost:8080/Zacinto/profilo">Profilo</a></li>
-			<li><a href="http://localhost:8080/Zacinto/chi-siamo">Chi
+			<li><a href="http://localhost:8080/Zacinto/chisiamo">Chi
 					siamo?</a></li>
 			<li><a href="http://localhost:8080/Zacinto/contatti">Contatti</a></li>
 		</ul>

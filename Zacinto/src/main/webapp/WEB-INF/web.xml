@@ -96,6 +96,12 @@
 
 	</servlet>
 
+	<servlet>
+
+		<servlet-name>ChiSiamo</servlet-name>
+		<servlet-class>zacintoView.ChiSiamo</servlet-class>
+
+	</servlet>
 
 
 	<!-- Servlet Mapping -->
@@ -189,6 +195,13 @@
 
 		<servlet-name>DoveSiamo</servlet-name>
 		<url-pattern>/dovesiamo</url-pattern>
+
+	</servlet-mapping>
+	
+		<servlet-mapping>
+
+		<servlet-name>ChiSiamo</servlet-name>
+		<url-pattern>/chisiamo</url-pattern>
 
 	</servlet-mapping>
 
