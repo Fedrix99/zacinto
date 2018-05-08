@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	<%@ page import="zacintoController.Prodotto" %>
+<%@ page import="zacintoController.Prodotto"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -10,7 +10,7 @@
 </head>
 <body>
 
-	<% Prodotto p = (Prodotto) request.getAttribute("nomeProdotto"); %>
+	<% Prodotto p = (Prodotto) request.getAttribute("prodotto"); %>
 
 	<div class="logo">
 
@@ -28,11 +28,21 @@
 
 		<form action="catalogo">
 
-			<% if(p != null) {%>
+			<% 
+			if(p != null) {
+			%>
 			<p>
-				Prodotto trovato: <a href="prodotto"><%=request.getAttribute("nomeProdotto") %>
-			</p>
-				<% } %>
+				Prodotto trovato: <p><a href="prodotto"><%= request.getAttribute("nomeProdotto") %>	</p>
+  
+			<% 
+			}else{
+			%>
+
+			<p>Prodotto non trovato.</p>
+
+			<%
+			}
+			%>
 			<button>Ritorna al catalogo</button>
 
 		</form>

@@ -29,12 +29,12 @@ public class RisultatiRicerca extends HttpServlet {
 		ResultSet rs = null;
 
 		Prodotto rscerca = new Prodotto();
-
+		
 		String cerca = req.getParameter("cerca");
 	
-		String prodotto = "Nessun prodotto corrisponde alla ricerca.";
-		
-		req.setAttribute("nomeProdotto", prodotto);
+//		String prodotto = "Nessun prodotto corrisponde alla ricerca.";
+//		
+//		req.setAttribute("nomeProdotto", prodotto);
 		
 		//query
 		try {
@@ -54,7 +54,7 @@ public class RisultatiRicerca extends HttpServlet {
 			req.setAttribute("autore", rscerca.getAutore());
 			req.setAttribute("codice", rscerca.getId());
 
-
+			req.setAttribute("prodotto", rscerca);
 
 
 
