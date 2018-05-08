@@ -28,7 +28,7 @@ public class Logout extends HttpServlet {
 		//Setto un valore vuoto per non fare vedere il nome Benvenuto ""
 		session.setAttribute("nome", utentelog.getNome());
 		
-		String logoutmsn; // messaggio di errore
+		String logoutmsn; // messaggio di scollegamento
 		logoutmsn = "Scollegamento effettuato correttamente.";
 		req.setAttribute("error", logoutmsn);
 		String textpulsante;

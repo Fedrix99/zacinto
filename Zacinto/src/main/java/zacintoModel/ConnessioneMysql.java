@@ -14,7 +14,7 @@ public class ConnessioneMysql {
 		Connection cn = null;
 
 		String connessione;
-
+//jdbc connettor driver			localhost:porta db/nomeDb?credenziali
 		connessione="jdbc:mysql://localhost:3306/zacinto?user=root&password=";
 
 		//Connection
@@ -45,7 +45,7 @@ public class ConnessioneMysql {
 
 		ResultSet rs;
 
-		Statement st;
+		Statement st; //è utilizzato per inviare istruzioni SQL al DB 
 
 		st=cn.createStatement();
 

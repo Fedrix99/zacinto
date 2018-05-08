@@ -23,14 +23,7 @@ public class Home extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String nextJSP;
-		resp.setContentType("text/html"); 
-		
-		if(Coke.controlloCookie(req) == true) {
-							
-			
-		
-		}
-		
+		resp.setContentType("text/html"); 	
 		nextJSP = "/home.jsp";
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
 		dispatcher.forward(req,resp);

@@ -25,7 +25,9 @@ public class Prodotto extends HttpServlet {
 		String nextJSP = "/credenziali_errore.jsp";
 		//Prende la quantita dalla classe libro che è di tipo statico		
 		
-		HttpSession session = req.getSession();		
+		HttpSession session = req.getSession();	
+		
+		session.setAttribute("quantita", Libro.getQuantita());
 		session.getAttribute("quantita");
 		
 		if(Coke.controlloCookie(req) == true) {

@@ -27,7 +27,7 @@ public class Profilo extends HttpServlet {
 		resp.setContentType("text/html"); 
 		String nextJSP;
 		
-		if(Coke.controlloCookie(req) == true) {
+		if(Coke.controlloCookie(req) == true) { //se il cookie ce ti apre la pagina profilo se no ti apre quella di errore con msn
 		
 			nextJSP = "/profilo.jsp";
 				

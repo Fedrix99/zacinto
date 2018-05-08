@@ -55,7 +55,7 @@ public class RegisterAccess extends HttpServlet {
 				cn = ConnessioneMysql.dbconnect();// Connessione al db
 
 				ConnessioneMysql.queryUpdate(cn,//INVIA I DATI PER REGISTRARE UN NUOVO UTENTE
-						"INSERT INTO `Utenti` (`id`, `nome`, `cognome`, `email`, `telefono`, `sesso`, `password`, `eta`) VALUES (NULL, '"
+						"INSERT INTO `utenti` (`id`, `nome`, `cognome`, `email`, `telefono`, `sesso`, `password`, `eta`) VALUES (NULL, '"
 								+ utente.getNome() + "', '" + utente.getCognome() + "', '" + utente.getEmail() + "', '"
 								+ utente.getTelefono() + "', '" + utente.getSesso() + "', '" + utente.getPassword()
 								+ "', '" + utente.getEta() + "')");

@@ -20,7 +20,7 @@
 
 	</div>
 
-	<div class="menu">
+	<div class="menu"> <!-- Bottoni del menu --> 
 
 		<ul id="menu">
 			<li><a href="http://localhost:8080/Zacinto/home">Home</a></li>
@@ -34,14 +34,14 @@
 
 	<div class="conteiner-home">
 
-		<div class="news">
+		<div class="news"> <!-- Sezione news -->
 
 			<h1>NEWS</h1>
 
-			<div class="news_uno">
+			<div class="news_uno"> <!-- Blocchi -->
 
-				<h2>Nuova uscita</h2>
-
+				<h2>Paulu Piulu</h2>
+				<a href="prodotto">Paulu Piulu</a>
 			</div>
 
 			<div class="news_due">
@@ -77,18 +77,17 @@
 
 			</div>
 
-			<div class="ultime_news">
+			<div class="ultime_news"> <!-- Ultima ora -->
 
 				<h2>Ultima ora</h2>
-				<marquee behavior="slide" direction="left">HTML slide-in
-					text...</marquee>
+				<marquee behavior="slide" direction="left">Giorgio Morale ritorna in campo con: <a href="prodotto">Paulu Piulu</a>;	  Cosenga del progetto 10/05/2018;	 La Biblioteca Zacinto batte ogni record: 100.000 visitatori al giorno</marquee>
 
 			</div>
 
 
 		</div>
 
-		<div class="link">
+		<div class="link"> <!-- Sezione link -->
 
 			<h2>LINK</h2>
 			<div class="link_attivi">
@@ -98,19 +97,19 @@
 			</div>
 
 			<div>
-
+						<!-- Sezione login,register -->
 				<h1>
 					Benvenuto <%=session.getAttribute("nome")%>
 					<!-- Prende il nome dell'utente loggato -->
 				</h1>
 
-				<form name="login" method="get" action="login">
+				<form name="login" method="get" action="login"> <!-- Pulsante login -->
 					<button type=SUBMIT
 						style="display: block; margin-left: auto; margin-right: auto; width: 100px;">
 						Login</button>
 				</form>
 
-				<form name="register" method="get" action="register">
+				<form name="register" method="get" action="register"> <!-- Pulsante register -->
 					<button type=SUBMIT
 						style="display: block; margin-left: auto; margin-right: auto; margin-top: 5px; width: 100px;">
 						Register</button>
@@ -121,9 +120,9 @@
 
 			<div>
 
-				<h2>Arrivederci...</h2>
+				<h2>Arrivederci...</h2> <!-- Sezione logout -->
 
-				<form name="logout" method="get" action="logout">
+				<form name="logout" method="get" action="logout"> <!-- Pulsante logout -->
 					<button type=SUBMIT
 						style="display: block; margin: 0 auto; width: 100px;">
 						Logout</button>
@@ -134,7 +133,7 @@
 
 	</div>
 
-	<footer>
+	<footer> <!-- Footer -->
 
 	<p>Biblioteca Zacinto &#169; 2018</p>
 

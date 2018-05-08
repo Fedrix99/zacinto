@@ -13,7 +13,7 @@
 <div class="conteiner">
 		
 		<div> 
-		<a class="logo">
+		<a class="logo"> 
 		
 			<img src="img/BibliotecaZacintoTrasparente.png" alt="Biblioteca Zacinto" style="display: block; margin-left: auto;margin-right: auto;" height="75px"> </img>
 		

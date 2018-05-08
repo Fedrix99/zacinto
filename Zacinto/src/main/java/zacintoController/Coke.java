@@ -15,7 +15,7 @@ public class Coke {
 	}
 	//Crea il cookie
 	public static void CreaCookie( HttpServletResponse resp, String nomeCookie, String value) {
-
+		//Oggetto cookie
 		Cookie coks = new Cookie(nomeCookie, value);
 		coks.setMaxAge(1200);
 		resp.addCookie(coks);

@@ -30,12 +30,12 @@ public class LoginAccess extends HttpServlet {
 		resp.setContentType("text/html"); 
 		
 		String nextJSP = "/login.jsp";
-		String email = null;
-		String password = null;	
-
+		
 		Connection cn = null;
 		ResultSet rs;
 		
+		String email = null;
+		String password = null;	
 		email = req.getParameter("email");
 		password = req.getParameter("password");
 		
