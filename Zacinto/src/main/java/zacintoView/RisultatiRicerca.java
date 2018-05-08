@@ -23,7 +23,7 @@ public class RisultatiRicerca extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		resp.setContentType("text/html"); 
-		String nextJSP;
+		String nextJSP ="/risultatiRicerca.jsp";
 		
 		Connection cn = null;
 		ResultSet rs = null;
@@ -31,7 +31,7 @@ public class RisultatiRicerca extends HttpServlet {
 		Prodotto rscerca = new Prodotto();
 		
 		String cerca = req.getParameter("cerca");
-		
+		System.out.println(""+cerca);
 		//query
 		try {
 			cn = ConnessioneMysql.dbconnect();
@@ -50,16 +50,17 @@ public class RisultatiRicerca extends HttpServlet {
 			req.setAttribute("autore", rscerca.getAutore());
 			req.setAttribute("codice", rscerca.getId());
 			
-			
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
 		
-		nextJSP="/risultatiRicerca.jsp";
+		//nextJSP="/risultatiRicerca.jsp";
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
 		dispatcher.forward(req,resp);
+
 		
 	}
 
