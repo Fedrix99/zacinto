@@ -1,8 +1,7 @@
 package zacintoView;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import zacintoController.Libro;
-import zacintoModel.ConnessioneMysql;
 
+@SuppressWarnings("serial")
 public class Riepilogo extends HttpServlet {
 
 	@Override

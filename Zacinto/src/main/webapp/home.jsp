@@ -63,21 +63,21 @@
 
 			<div class="news_quattro">
 
-				<h2>Nuova uscita</h2>
-
+				<h2>Invasione al IIS Giorgi</h2>
+				<p>L'istituto IIS Giorgi Milano batte il record di iscrizioni, c'è anche la coda fuori!</p>
 			</div>
 
 			<div class="news_cinque">
 
-				<h2>Nuova uscita</h2>
-
+				<h2>Nuova sede</h2>
+				<p> La Biblioteca Zacinto ha aperto una nuova sede a Bari.</p>
 			</div>
 
 
 			<div class="news_sei">
 
-				<h2>Nuova uscita</h2>
-
+				<h2>Nuovo look</h2>
+				<p> Scopri il nuovo look del sito della <a href="http://localhost:8080/Zacinto/home">Biblioteca Zacinto</a></a></p>
 
 			</div>
 

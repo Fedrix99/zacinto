@@ -14,7 +14,7 @@
 		<img src="img/BibliotecaZacintoTrasparente.png"
 			alt="Biblioteca Zacinto"
 			style="display: block; margin-left: auto; margin-right: auto;"
-			height="75px"> </img>
+			height="75px"> 
 
 	</div>
 
@@ -35,10 +35,6 @@
 		<div class="ricerca">
 
 			<div class="campo-ricerca">
-				
-<!-- 				<label for=search> Cerca</label> -->
-<!-- 				<input type="search" id="search" name="cerca" class="txt" size="20" placeholder="Cerca nella Bilioteca"> -->
-<!-- 				<input type="submit" class="btn" value="Cerca"> -->
 
 					<form name="ricerca" method="get" action="risultatiricerca"> <label> Cerca</label> <input name="cerca" class="txt" size="20px" placeholder="Cerca nella Bilioteca"> <button type=SUBMIT > Invia </button></form> 
 				

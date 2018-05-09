@@ -11,11 +11,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.sun.crypto.provider.RSACipher;
-
 import zacintoController.Prodotto;
 import zacintoModel.ConnessioneMysql;
 
+@SuppressWarnings("serial")
 public class RisultatiRicerca extends HttpServlet {
 
 	@Override
@@ -31,11 +30,7 @@ public class RisultatiRicerca extends HttpServlet {
 		Prodotto rscerca = new Prodotto();
 		
 		String cerca = req.getParameter("cerca");
-	
-//		String prodotto = "Nessun prodotto corrisponde alla ricerca.";
-//		
-//		req.setAttribute("nomeProdotto", prodotto);
-		
+			
 		//query
 		try {
 			cn = ConnessioneMysql.dbconnect();

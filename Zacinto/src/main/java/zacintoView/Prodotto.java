@@ -12,11 +12,12 @@ import javax.servlet.http.HttpSession;
 
 import zacintoController.*;
 import zacintoModel.ProdottoMysql;
-import zacintoModel.RegisterMsql;
+
 
 @SuppressWarnings("serial")
 public class Prodotto extends HttpServlet {
 
+	@SuppressWarnings("static-access")
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub

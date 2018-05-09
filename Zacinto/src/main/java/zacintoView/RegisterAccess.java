@@ -13,14 +13,14 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import zacintoController.Coke;
-import zacintoController.Register;
+
 import zacintoController.Utente;
 import zacintoModel.ConnessioneMysql;
-import zacintoModel.RegisterMsql;
 
+
+@SuppressWarnings("serial")
 public class RegisterAccess extends HttpServlet {
 
-	private ResultSet rs;
 
 	@SuppressWarnings("null")
 	@Override

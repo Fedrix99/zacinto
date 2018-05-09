@@ -6,9 +6,6 @@ import javax.servlet.http.HttpServletResponse;
 
 public class Coke {
 
-	private String nomeCookie;
-	private String value;
-
 	//Costruttore
 	public Coke() {
 

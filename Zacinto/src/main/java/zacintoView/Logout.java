@@ -9,10 +9,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import jdk.nashorn.internal.ir.SetSplitState;
+
 import zacintoController.Coke;
 import zacintoController.Utente;
 
+@SuppressWarnings("serial")
 public class Logout extends HttpServlet {
 
 	@Override

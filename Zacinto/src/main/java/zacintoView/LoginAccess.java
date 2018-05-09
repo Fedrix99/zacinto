@@ -4,8 +4,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Set;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -16,7 +15,7 @@ import javax.servlet.http.HttpSession;
 
 import zacintoModel.*;
 import zacintoController.*;
-import zacintoController.Prodotto;
+
 
 
 @SuppressWarnings("serial")
